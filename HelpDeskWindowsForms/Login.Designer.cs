@@ -101,9 +101,9 @@
             label7.ForeColor = Color.White;
             label7.Location = new Point(36, 506);
             label7.Name = "label7";
-            label7.Size = new Size(490, 34);
+            label7.Size = new Size(489, 34);
             label7.TabIndex = 2;
-            label7.Text = "gerencia chamadas de forma simples e eficiente";
+            label7.Text = "gerencie chamadas de forma simples e eficiente";
             // 
             // label6
             // 

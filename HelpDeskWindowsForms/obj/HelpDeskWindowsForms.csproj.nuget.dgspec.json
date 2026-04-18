@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {}
+    "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {
+    "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
+        "projectUniqueName": "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
         "projectName": "HelpDeskWindowsForms",
-        "projectPath": "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
+        "projectPath": "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
         "packagesPath": "C:\\Users\\delmi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskForms\\HelpDeskWindowsForms\\obj\\",
+        "outputPath": "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskWindowsForms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
