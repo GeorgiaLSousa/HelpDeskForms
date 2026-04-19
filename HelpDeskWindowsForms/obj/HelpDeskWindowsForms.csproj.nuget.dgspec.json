@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {}
+    "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {
+    "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
+        "projectUniqueName": "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
         "projectName": "HelpDeskWindowsForms",
-        "projectPath": "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
-        "packagesPath": "C:\\Users\\delmi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\delmi\\OneDrive\\Documentos\\Login\\HelpDeskWindowsForms\\obj\\",
+        "projectPath": "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
+        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
+        "outputPath": "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\delmi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,12 +26,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net10.0-windows": {
-            "framework": "net10.0-windows7.0",
+          "net10.0-windows7.0": {
             "targetAlias": "net10.0-windows",
             "projectReferences": {}
           }
@@ -46,12 +44,31 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
-        "net10.0-windows": {
-          "framework": "net10.0-windows7.0",
+        "net10.0-windows7.0": {
           "targetAlias": "net10.0-windows",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -71,7 +88,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300-preview.0.26177.108/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
