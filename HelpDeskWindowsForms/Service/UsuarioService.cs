@@ -28,7 +28,7 @@ namespace HelpDeskWindowsForms.Service
                 throw new Exception("CPF invalido");
             }
 
-            else if (usuario.Senha.Length < 8)
+            else if (usuario.Senha.Length < 6)
             {
                 throw new Exception("A senha deve ter no mínimo 8 caracteres.");
             }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {}
+    "C:\\Users\\rafae\\Projetos\\Estudos\\UninoveCC\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {}
   },
   "projects": {
-    "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {
+    "C:\\Users\\rafae\\Projetos\\Estudos\\UninoveCC\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
+        "projectUniqueName": "C:\\Users\\rafae\\Projetos\\Estudos\\UninoveCC\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
         "projectName": "HelpDeskWindowsForms",
-        "projectPath": "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
-        "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-        "outputPath": "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\obj\\",
+        "projectPath": "C:\\Users\\rafae\\Projetos\\Estudos\\UninoveCC\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
+        "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rafae\\Projetos\\Estudos\\UninoveCC\\HelpDeskForms\\HelpDeskWindowsForms\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -29,7 +29,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net10.0-windows7.0": {
+          "net10.0-windows": {
+            "framework": "net10.0-windows7.0",
             "targetAlias": "net10.0-windows",
             "projectReferences": {}
           }
@@ -47,7 +48,8 @@
         "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
-        "net10.0-windows7.0": {
+        "net10.0-windows": {
+          "framework": "net10.0-windows7.0",
           "targetAlias": "net10.0-windows",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
@@ -88,7 +90,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
