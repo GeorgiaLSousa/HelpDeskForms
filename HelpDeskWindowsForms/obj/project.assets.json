@@ -2072,24 +2072,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\georg\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\betyf\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
+      "projectUniqueName": "C:\\Projeto\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
       "projectName": "HelpDeskWindowsForms",
-      "projectPath": "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
-      "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-      "outputPath": "C:\\repositorios\\HelpDeskForms\\HelpDeskWindowsForms\\obj\\",
+      "projectPath": "C:\\Projeto\\HelpDeskForms\\HelpDeskWindowsForms\\HelpDeskWindowsForms.csproj",
+      "packagesPath": "C:\\Users\\betyf\\.nuget\\packages\\",
+      "outputPath": "C:\\Projeto\\HelpDeskForms\\HelpDeskWindowsForms\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\georg\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\betyf\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

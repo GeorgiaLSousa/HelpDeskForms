@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HelpDeskWindowsForms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a86f57a30fa4eeaf37fb0c1da43fe2b456345a57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f7a4944666eef087bd888f6b0f2272d611a7665")]
 [assembly: System.Reflection.AssemblyProductAttribute("HelpDeskWindowsForms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HelpDeskWindowsForms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
