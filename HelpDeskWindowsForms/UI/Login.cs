@@ -1,6 +1,7 @@
 using HelpDeskWindowsForms.Data;
 using HelpDeskWindowsForms.Repositories;
 using HelpDeskWindowsForms.Service;
+using HelpDeskWindowsForms.UI;
 using Microsoft.Extensions.DependencyInjection;
 
 
@@ -38,7 +39,18 @@ namespace HelpDeskWindowsForms
         }
         private void label5_Click(object sender, EventArgs e)
         {
+            
 
+
+
+            // Cria uma nova instância da sua tela de cadastro
+            Cadastro telaDeCadastro = new Cadastro();
+
+            // Mostra a tela de cadastro
+            telaDeCadastro.Show();
+
+            // Esconde a tela de login atual
+            this.Hide();
         }
 
         private void Senha_Click(object sender, EventArgs e)
@@ -82,6 +94,16 @@ namespace HelpDeskWindowsForms
         private void SenhaText_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label5_MouseLeave(object sender, EventArgs e)
+        {
+            label5.ForeColor = Color.DeepSkyBlue;
+        }
+
+        private void label5_MouseEnter(object sender, EventArgs e)
+        {
+            label5.ForeColor = Color.Cyan;
         }
     }
 }
