@@ -17,12 +17,10 @@ namespace HelpDeskWindowsForms
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            ArredondarBordas(panel1, 30, e);
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            ArredondarBordas(panel3, 30, e);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -87,12 +85,10 @@ namespace HelpDeskWindowsForms
 
         private void button5_Click(object sender, EventArgs e)
         {
-            // Se quiser que algo aconteça ao clicar, coloque aqui
         }
 
         private void button5_Paint(object sender, PaintEventArgs e)
         {
-            ArredondarBordas(lblBadgeStatus, lblBadgeStatus.Height, e);
         }
 
         private void label23_Click(object sender, EventArgs e)
@@ -131,19 +127,10 @@ namespace HelpDeskWindowsForms
 
         private void ArredondarBordas(Control componente, int raio, PaintEventArgs e)
         {
-            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            GraphicsPath path = new GraphicsPath();
-            path.AddArc(0, 0, raio, raio, 180, 90);
-            path.AddArc(componente.Width - raio, 0, raio, raio, 270, 90);
-            path.AddArc(componente.Width - raio, componente.Height - raio, raio, raio, 0, 90);
-            path.AddArc(0, componente.Height - raio, raio, raio, 90, 90);
-            path.CloseAllFigures();
-            componente.Region = new Region(path);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            ArredondarBordas(panel2, panel2.Height, e);
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
@@ -152,7 +139,6 @@ namespace HelpDeskWindowsForms
 
         private void Gestaodechamado_Paint(object sender, PaintEventArgs e)
         {
-            ArredondarBordas(this, 40, e);
         }
 
         private void Gestaodechamado_Load(object sender, EventArgs e)

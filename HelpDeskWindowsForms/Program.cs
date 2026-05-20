@@ -30,6 +30,7 @@ namespace HelpDeskWindowsForms
 
             // Registrar os formulários para que possam receber injeção de dependência
             services.AddTransient<Login>();
+            services.AddTransient<Gestaodechamado>();
 
             ServiceProvider = services.BuildServiceProvider();
 
@@ -50,6 +51,7 @@ namespace HelpDeskWindowsForms
             }
 
             // Iniciar a aplicação resolvendo o formulário inicial da Injeção de Dependências
+            Application.Run(ServiceProvider.GetRequiredService<Gestaodechamado>());
             Application.Run(ServiceProvider.GetRequiredService<Login>());
         }
     }
