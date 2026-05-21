@@ -9,3 +9,7 @@ Telas:
 - Dashboard Analista
 - Cadastro Usuario
 <img width="738" height="357" alt="image" src="https://github.com/user-attachments/assets/3e180fc5-a739-4494-9dab-a7a5c603c937" />
+- Novo Chamado
+- Detalhes Analista
+- Detalhes Cliente
+- Atualizar Chamado
