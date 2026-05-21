@@ -32,6 +32,7 @@ namespace HelpDeskWindowsForms
             // Registrar os formulários para que possam receber injeção de dependência
             services.AddTransient<Login>();
             services.AddTransient<Cadastro>();
+            services.AddTransient<DashboardCliente>();
 
             ServiceProvider = services.BuildServiceProvider();
 
