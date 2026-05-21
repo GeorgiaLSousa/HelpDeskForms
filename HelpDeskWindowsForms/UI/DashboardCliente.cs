@@ -19,5 +19,15 @@ namespace HelpDeskWindowsForms.UI
         {
 
         }
+
+        private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btNovoChamado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
