@@ -52,9 +52,8 @@ namespace HelpDeskWindowsForms
             }
 
             // Iniciar a aplicação resolvendo o formulário inicial da Injeção de Dependências
-            //Application.Run(ServiceProvider.GetRequiredService<Login>());
-            ApplicationConfiguration.Initialize();
-            Application.Run(new DashboardCliente());
+            Application.Run(ServiceProvider.GetRequiredService<Login>());
+
         }
     }
 }
