@@ -5,8 +5,14 @@
     <Compile Update="UI\Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UI\DashboardCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UI\Login.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CardChamado.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

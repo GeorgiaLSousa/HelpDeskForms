@@ -64,82 +64,86 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(2, 1, 2, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(734, 32);
+            panel1.Size = new Size(1366, 72);
             panel1.TabIndex = 0;
             // 
             // label1
             // 
-            label1.Font = new Font("Microsoft Sans Serif", 10.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(130, 10);
+            label1.Location = new Point(154, 22);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(184, 22);
+            label1.Size = new Size(234, 26);
             label1.TabIndex = 2;
             label1.Text = "HelpDesk Pro System";
             // 
             // panel2
             // 
-            panel2.Location = new Point(0, 35);
+            panel2.Location = new Point(0, 97);
             panel2.Margin = new Padding(2, 1, 2, 1);
             panel2.Name = "panel2";
-            panel2.Size = new Size(296, 328);
+            panel2.Size = new Size(338, 387);
             panel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(6, 6);
+            pictureBox1.Location = new Point(18, 10);
             pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(13, 19);
+            pictureBox1.Size = new Size(120, 52);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // TB_Nome
             // 
-            TB_Nome.Location = new Point(135, 77);
+            TB_Nome.Font = new Font("Microsoft Sans Serif", 12F);
+            TB_Nome.Location = new Point(160, 150);
             TB_Nome.Margin = new Padding(2, 1, 2, 1);
             TB_Nome.Name = "TB_Nome";
-            TB_Nome.Size = new Size(260, 21);
+            TB_Nome.Size = new Size(420, 26);
             TB_Nome.TabIndex = 0;
-            TB_Nome.Text = "ra";
             TB_Nome.TextChanged += TB_Nome_TextChanged;
             // 
             // TB_Email
             // 
-            TB_Email.Location = new Point(135, 126);
+            TB_Email.Font = new Font("Microsoft Sans Serif", 12F);
+            TB_Email.Location = new Point(160, 235);
             TB_Email.Margin = new Padding(2, 1, 2, 1);
             TB_Email.Name = "TB_Email";
-            TB_Email.Size = new Size(260, 21);
+            TB_Email.Size = new Size(420, 26);
             TB_Email.TabIndex = 1;
             // 
             // TB_CPF
             // 
-            TB_CPF.Location = new Point(135, 174);
+            TB_CPF.Font = new Font("Microsoft Sans Serif", 12F);
+            TB_CPF.Location = new Point(160, 320);
             TB_CPF.Margin = new Padding(2, 1, 2, 1);
             TB_CPF.Name = "TB_CPF";
-            TB_CPF.Size = new Size(260, 21);
+            TB_CPF.Size = new Size(420, 26);
             TB_CPF.TabIndex = 2;
             // 
             // TB_Senha
             // 
-            TB_Senha.Location = new Point(134, 219);
+            TB_Senha.Font = new Font("Microsoft Sans Serif", 12F);
+            TB_Senha.Location = new Point(160, 405);
             TB_Senha.Margin = new Padding(2, 1, 2, 1);
             TB_Senha.Name = "TB_Senha";
-            TB_Senha.Size = new Size(260, 21);
+            TB_Senha.Size = new Size(420, 26);
             TB_Senha.TabIndex = 3;
             // 
             // BT_Cadastrar
             // 
             BT_Cadastrar.BackColor = Color.FromArgb(18, 25, 47);
             BT_Cadastrar.FlatStyle = FlatStyle.Popup;
+            BT_Cadastrar.Font = new Font("Microsoft Sans Serif", 12F);
             BT_Cadastrar.ForeColor = Color.White;
-            BT_Cadastrar.Location = new Point(221, 255);
+            BT_Cadastrar.Location = new Point(290, 480);
             BT_Cadastrar.Margin = new Padding(2, 1, 2, 1);
             BT_Cadastrar.Name = "BT_Cadastrar";
-            BT_Cadastrar.Size = new Size(81, 22);
+            BT_Cadastrar.Size = new Size(150, 42);
             BT_Cadastrar.TabIndex = 8;
             BT_Cadastrar.Text = "Cadastrar";
             BT_Cadastrar.UseVisualStyleBackColor = false;
@@ -147,7 +151,7 @@
             // 
             // panel4
             // 
-            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel4.Controls.Add(Nome);
             panel4.Controls.Add(BT_Cadastrar);
             panel4.Controls.Add(Senha);
@@ -158,42 +162,42 @@
             panel4.Controls.Add(TB_Email);
             panel4.Controls.Add(TB_Nome);
             panel4.Font = new Font("Microsoft Sans Serif", 9F);
-            panel4.Location = new Point(282, 45);
+            panel4.Location = new Point(540, 72);
             panel4.Margin = new Padding(2, 1, 2, 1);
             panel4.Name = "panel4";
-            panel4.Size = new Size(453, 317);
+            panel4.Size = new Size(826, 696);
             panel4.TabIndex = 2;
             // 
             // Nome
             // 
             Nome.AutoSize = true;
-            Nome.Font = new Font("Microsoft Sans Serif", 9F);
-            Nome.Location = new Point(133, 55);
+            Nome.Font = new Font("Microsoft Sans Serif", 13F);
+            Nome.Location = new Point(160, 118);
             Nome.Margin = new Padding(2, 0, 2, 0);
             Nome.Name = "Nome";
-            Nome.Size = new Size(41, 15);
+            Nome.Size = new Size(60, 22);
             Nome.TabIndex = 9;
             Nome.Text = "Nome";
             // 
             // Senha
             // 
             Senha.AutoSize = true;
-            Senha.Font = new Font("Microsoft Sans Serif", 9F);
-            Senha.Location = new Point(133, 199);
+            Senha.Font = new Font("Microsoft Sans Serif", 13F);
+            Senha.Location = new Point(160, 372);
             Senha.Margin = new Padding(2, 0, 2, 0);
             Senha.Name = "Senha";
-            Senha.Size = new Size(43, 15);
+            Senha.Size = new Size(66, 22);
             Senha.TabIndex = 6;
             Senha.Text = "Senha";
             // 
             // CPF
             // 
             CPF.AutoSize = true;
-            CPF.Font = new Font("Microsoft Sans Serif", 9F);
-            CPF.Location = new Point(133, 153);
+            CPF.Font = new Font("Microsoft Sans Serif", 13F);
+            CPF.Location = new Point(160, 288);
             CPF.Margin = new Padding(2, 0, 2, 0);
             CPF.Name = "CPF";
-            CPF.Size = new Size(30, 15);
+            CPF.Size = new Size(43, 22);
             CPF.TabIndex = 5;
             CPF.Text = "CPF";
             CPF.Click += CPF_Click;
@@ -201,21 +205,21 @@
             // Email
             // 
             Email.AutoSize = true;
-            Email.Font = new Font("Microsoft Sans Serif", 9F);
-            Email.Location = new Point(133, 105);
+            Email.Font = new Font("Microsoft Sans Serif", 13F);
+            Email.Location = new Point(160, 202);
             Email.Margin = new Padding(2, 0, 2, 0);
             Email.Name = "Email";
-            Email.Size = new Size(39, 15);
+            Email.Size = new Size(57, 22);
             Email.TabIndex = 4;
             Email.Text = "Email";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(52, 102);
+            pictureBox2.Location = new Point(95, 245);
             pictureBox2.Margin = new Padding(2, 1, 2, 1);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(207, 120);
+            pictureBox2.Size = new Size(350, 220);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
@@ -226,21 +230,21 @@
             panel3.Controls.Add(label2);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(pictureBox2);
-            panel3.Location = new Point(-20, 33);
+            panel3.Location = new Point(0, 72);
             panel3.Margin = new Padding(2, 1, 2, 1);
             panel3.Name = "panel3";
-            panel3.Size = new Size(316, 328);
+            panel3.Size = new Size(540, 696);
             panel3.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(94, 75);
+            label2.Location = new Point(148, 160);
             label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(111, 15);
+            label2.Size = new Size(250, 36);
             label2.TabIndex = 3;
             label2.Text = "Crie sua conta !!";
             label2.Click += label2_Click_1;
@@ -248,21 +252,21 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 7.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(52, 233);
+            label3.Location = new Point(112, 500);
             label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(198, 13);
+            label3.Size = new Size(314, 20);
             label3.TabIndex = 2;
             label3.Text = "Preencha os dados abaixo para começar";
             label3.Click += label3_Click;
             // 
             // Cadastro
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(734, 358);
+            ClientSize = new Size(1366, 768);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(panel4);

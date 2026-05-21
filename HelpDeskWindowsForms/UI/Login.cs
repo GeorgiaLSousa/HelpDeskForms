@@ -41,7 +41,7 @@ namespace HelpDeskWindowsForms
         }
         private void label5_Click(object sender, EventArgs e)
         {
-            
+
 
 
 
@@ -106,6 +106,11 @@ namespace HelpDeskWindowsForms
         private void label5_MouseEnter(object sender, EventArgs e)
         {
             label5.ForeColor = Color.Cyan;
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
