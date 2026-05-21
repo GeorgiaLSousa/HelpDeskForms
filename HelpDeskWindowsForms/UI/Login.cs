@@ -14,12 +14,14 @@ namespace HelpDeskWindowsForms
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
         private readonly UsuarioService _usuarioService = null!;
+        private readonly IServiceProvider _serviceProvider = null!;
 
         // ✅ Construtor com DI (principal)
-        public Login(UsuarioService usuarioService)
+        public Login(UsuarioService usuarioService, IServiceProvider serviceProvider)
         {
             InitializeComponent();
             _usuarioService = usuarioService;
+            _serviceProvider = serviceProvider;
 
             ArredondarComponentes();
         }
@@ -44,7 +46,7 @@ namespace HelpDeskWindowsForms
 
 
             // Cria uma nova instância da sua tela de cadastro
-            Cadastro telaDeCadastro = new Cadastro();
+            Cadastro telaDeCadastro = _serviceProvider.GetRequiredService<Cadastro>();
 
             // Mostra a tela de cadastro
             telaDeCadastro.Show();
@@ -74,7 +76,7 @@ namespace HelpDeskWindowsForms
                 this.Hide();
 
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Email ou Senha está errado");
             }

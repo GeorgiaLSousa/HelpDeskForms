@@ -1,15 +1,8 @@
-﻿using HelpDeskWindowsForms.Service;
+using HelpDeskWindowsForms.Model;
+using HelpDeskWindowsForms.Service;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using Microsoft.Data.SqlClient;
-
 
 namespace HelpDeskWindowsForms.UI
 {
@@ -20,12 +13,17 @@ namespace HelpDeskWindowsForms.UI
 
         private readonly UsuarioService _usuarioService = null!;
 
-
         public Cadastro()
         {
             InitializeComponent();
             ArredondarComponentes();
         }
+
+        public Cadastro(UsuarioService usuarioService) : this()
+        {
+            _usuarioService = usuarioService;
+        }
+
         private void ArredondarComponentes()
         {
             TB_Nome.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, TB_Nome.Width, TB_Nome.Height, 15, 15));
@@ -34,9 +32,6 @@ namespace HelpDeskWindowsForms.UI
             TB_Senha.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, TB_Senha.Width, TB_Senha.Height, 15, 15));
             BT_Cadastrar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, BT_Cadastrar.Width, BT_Cadastrar.Height, 15, 15));
         }
-
-
-
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -57,11 +52,12 @@ namespace HelpDeskWindowsForms.UI
         {
 
         }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            // O número 20 define o quão arredondado será o canto
-            //panel1.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 20, 20));
+
         }
+
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -79,55 +75,16 @@ namespace HelpDeskWindowsForms.UI
 
         private void Cadastrar_Click(object sender, EventArgs e)
         {
-            // 1. Validar se todos os campos estão preenchidos
-            if (string.IsNullOrWhiteSpace(TB_Nome.Text) || string.IsNullOrWhiteSpace(TB_Email.Text) ||
-                string.IsNullOrWhiteSpace(TB_CPF.Text) || string.IsNullOrWhiteSpace(TB_Senha.Text))
-            {
-                MessageBox.Show("Por favor, preencha todos os campos obrigatórios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // 2. String de conexão (Substitua pelo caminho do SEU banco de dados)
-            // Dica: Você encontra isso nas propriedades do seu arquivo .mdf ou no Server Explorer
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SeuBanco.mdf;Integrated Security=True";
-
-            // 3. Comando SQL para inserir
-            string query = "INSERT INTO Usuarios (Nome, Email, CPF, Senha) VALUES (@nome, @email, @cpf, @senha)";
-
-            // 4. Executar a operação no banco de dados
-            try
-            {
-                using (SqlConnection conexao = new SqlConnection(connectionString))
-                {
-                    conexao.Open();
-                    using (SqlCommand comando = new SqlCommand(query, conexao))
-                    {
-                        // Vincula os valores das caixas de texto aos parâmetros do SQL
-                        comando.Parameters.AddWithValue("@nome", TB_Nome.Text);
-                        comando.Parameters.AddWithValue("@email", TB_Email.Text);
-                        comando.Parameters.AddWithValue("@cpf", TB_CPF.Text);
-                        comando.Parameters.AddWithValue("@senha", TB_Senha.Text);
-
-                        comando.ExecuteNonQuery();
-                        MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // Limpa os campos após cadastrar
-                        TB_Nome.Clear();
-                        TB_Email.Clear();
-                        TB_CPF.Clear();
-                        TB_Senha.Clear();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao conectar com o banco: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            CadastrarUsuario();
         }
 
         private void BT_Cadastrar_Click(object sender, EventArgs e)
         {
-            // 1. Validar se todos os campos estão preenchidos
+            CadastrarUsuario();
+        }
+
+        private void CadastrarUsuario()
+        {
             if (string.IsNullOrWhiteSpace(TB_Nome.Text) || string.IsNullOrWhiteSpace(TB_Email.Text) ||
                 string.IsNullOrWhiteSpace(TB_CPF.Text) || string.IsNullOrWhiteSpace(TB_Senha.Text))
             {
@@ -135,44 +92,35 @@ namespace HelpDeskWindowsForms.UI
                 return;
             }
 
-            // 2. String de conexão (Substitua pelo caminho do SEU banco de dados)
-            // Dica: Você encontra isso nas propriedades do seu arquivo .mdf ou no Server Explorer
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SeuBanco.mdf;Integrated Security=True";
-
-            // 3. Comando SQL para inserir
-            string query = "INSERT INTO Usuarios (Nome, Email, CPF, Senha) VALUES (@nome, @email, @cpf, @senha)";
-
-            // 4. Executar a operação no banco de dados
             try
             {
-                using (SqlConnection conexao = new SqlConnection(connectionString))
+                var usuario = new Usuario
                 {
-                    conexao.Open();
-                    using (SqlCommand comando = new SqlCommand(query, conexao))
-                    {
-                        // Vincula os valores das caixas de texto aos parâmetros do SQL
-                        comando.Parameters.AddWithValue("@nome", TB_Nome.Text);
-                        comando.Parameters.AddWithValue("@email", TB_Email.Text);
-                        comando.Parameters.AddWithValue("@cpf", TB_CPF.Text);
-                        comando.Parameters.AddWithValue("@senha", TB_Senha.Text);
+                    Nome = TB_Nome.Text.Trim(),
+                    Email = TB_Email.Text.Trim(),
+                    CPF = TB_CPF.Text.Trim(),
+                    Senha = TB_Senha.Text,
+                    Perfil = Perfil.Cliente
+                };
 
-                        comando.ExecuteNonQuery();
-                        MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _usuarioService.CriarUsuario(usuario);
 
-                        // Limpa os campos após cadastrar
-                        TB_Nome.Clear();
-                        TB_Email.Clear();
-                        TB_CPF.Clear();
-                        TB_Senha.Clear();
-                    }
-                }
+                MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                TB_Nome.Clear();
+                TB_Email.Clear();
+                TB_CPF.Clear();
+                TB_Senha.Clear();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao conectar com o banco: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private void TB_Nome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
-

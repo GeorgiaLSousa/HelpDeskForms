@@ -104,6 +104,8 @@
             TB_Nome.Name = "TB_Nome";
             TB_Nome.Size = new Size(260, 21);
             TB_Nome.TabIndex = 0;
+            TB_Nome.Text = "ra";
+            TB_Nome.TextChanged += TB_Nome_TextChanged;
             // 
             // TB_Email
             // 
