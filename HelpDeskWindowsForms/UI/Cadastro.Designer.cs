@@ -64,7 +64,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(2, 1, 2, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(734, 32);
+            panel1.Size = new Size(744, 32);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -158,7 +158,7 @@
             panel4.Controls.Add(TB_Email);
             panel4.Controls.Add(TB_Nome);
             panel4.Font = new Font("Microsoft Sans Serif", 9F);
-            panel4.Location = new Point(282, 45);
+            panel4.Location = new Point(292, 45);
             panel4.Margin = new Padding(2, 1, 2, 1);
             panel4.Name = "panel4";
             panel4.Size = new Size(453, 317);
@@ -262,7 +262,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(734, 358);
+            ClientSize = new Size(744, 359);
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(panel4);
