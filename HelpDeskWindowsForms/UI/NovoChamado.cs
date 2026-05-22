@@ -19,5 +19,17 @@ namespace HelpDeskWindowsForms.UI
         {
 
         }
+
+        private void lbVoltar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbVoltar_Click_1(object sender, EventArgs e)
+        {
+            var sair = new DashboardCliente();
+            sair.Show();
+            this.Hide();
+        }
     }
 }
