@@ -63,6 +63,16 @@ namespace HelpDeskWindowsForms.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ajuda {
+            get {
+                object obj = ResourceManager.GetObject("ajuda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_usuario {
             get {
                 object obj = ResourceManager.GetObject("icone_usuario", resourceCulture);

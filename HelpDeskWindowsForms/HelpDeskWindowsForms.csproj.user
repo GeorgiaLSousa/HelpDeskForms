@@ -17,5 +17,8 @@
     <Compile Update="CardChamado.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="UI\NovoChamado.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
