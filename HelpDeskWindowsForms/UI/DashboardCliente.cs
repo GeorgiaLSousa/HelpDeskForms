@@ -16,7 +16,9 @@ namespace HelpDeskWindowsForms.UI
         }
         private void btNovoChamado_Click(object sender, EventArgs e)
         {
-
+            var entrar = new NovoChamado();
+            entrar.Show();
+            this.Hide();
         }
 
         private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
