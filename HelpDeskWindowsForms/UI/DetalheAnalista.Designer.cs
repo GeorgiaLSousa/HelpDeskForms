@@ -70,6 +70,7 @@
             label1 = new Label();
             panel4 = new Panel();
             panel9 = new Panel();
+            label6 = new Label();
             panel8 = new Panel();
             label5 = new Label();
             panel7 = new Panel();
@@ -78,7 +79,6 @@
             label3 = new Label();
             panel5 = new Panel();
             label2 = new Label();
-            label6 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -559,6 +559,17 @@
             panel9.TabIndex = 5;
             panel9.Paint += panel5_Paint;
             // 
+            // label6
+            // 
+            label6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(-3, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(242, 38);
+            label6.TabIndex = 5;
+            label6.Text = "Assumir chamado";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // panel8
             // 
             panel8.BackColor = Color.FromArgb(25, 31, 52);
@@ -594,7 +605,7 @@
             // 
             label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(0, 0);
+            label4.Location = new Point(-3, 0);
             label4.Name = "label4";
             label4.Size = new Size(179, 38);
             label4.TabIndex = 0;
@@ -635,23 +646,12 @@
             // label2
             // 
             label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(0, 0);
+            label2.Location = new Point(3, 0);
             label2.Name = "label2";
             label2.Size = new Size(176, 38);
             label2.TabIndex = 0;
             label2.Text = "Status:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            label6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(-3, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(242, 38);
-            label6.TabIndex = 5;
-            label6.Text = "Assumir chamado";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // DetalheAnalista
             // 
@@ -665,6 +665,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "DetalheAnalista";
+            WindowState = FormWindowState.Maximized;
             Load += DetalheAnalista_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

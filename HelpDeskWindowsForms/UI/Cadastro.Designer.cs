@@ -35,13 +35,13 @@
             pictureBox1 = new PictureBox();
             TB_Nome = new TextBox();
             TB_Email = new TextBox();
-            TB_CPF = new TextBox();
             TB_Senha = new TextBox();
             BT_Cadastrar = new Button();
             panel4 = new Panel();
+            PerfilLabel = new Label();
+            CMB_Perfil = new ComboBox();
             Nome = new Label();
             Senha = new Label();
-            CPF = new Label();
             Email = new Label();
             pictureBox2 = new PictureBox();
             panel3 = new Panel();
@@ -116,23 +116,14 @@
             TB_Email.Size = new Size(368, 26);
             TB_Email.TabIndex = 1;
             // 
-            // TB_CPF
-            // 
-            TB_CPF.Font = new Font("Microsoft Sans Serif", 12F);
-            TB_CPF.Location = new Point(140, 240);
-            TB_CPF.Margin = new Padding(2, 1, 2, 1);
-            TB_CPF.Name = "TB_CPF";
-            TB_CPF.Size = new Size(368, 26);
-            TB_CPF.TabIndex = 2;
-            // 
             // TB_Senha
             // 
             TB_Senha.Font = new Font("Microsoft Sans Serif", 12F);
-            TB_Senha.Location = new Point(140, 304);
+            TB_Senha.Location = new Point(140, 240);
             TB_Senha.Margin = new Padding(2, 1, 2, 1);
             TB_Senha.Name = "TB_Senha";
             TB_Senha.Size = new Size(368, 26);
-            TB_Senha.TabIndex = 3;
+            TB_Senha.TabIndex = 2;
             // 
             // BT_Cadastrar
             // 
@@ -140,25 +131,25 @@
             BT_Cadastrar.FlatStyle = FlatStyle.Popup;
             BT_Cadastrar.Font = new Font("Microsoft Sans Serif", 12F);
             BT_Cadastrar.ForeColor = Color.White;
-            BT_Cadastrar.Location = new Point(254, 360);
+            BT_Cadastrar.Location = new Point(254, 368);
             BT_Cadastrar.Margin = new Padding(2, 1, 2, 1);
             BT_Cadastrar.Name = "BT_Cadastrar";
             BT_Cadastrar.Size = new Size(131, 32);
-            BT_Cadastrar.TabIndex = 8;
+            BT_Cadastrar.TabIndex = 5;
             BT_Cadastrar.Text = "Cadastrar";
             BT_Cadastrar.UseVisualStyleBackColor = false;
             BT_Cadastrar.Click += BT_Cadastrar_Click;
             // 
             // panel4
-            // 
+            //
             panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel4.Controls.Add(PerfilLabel);
+            panel4.Controls.Add(CMB_Perfil);
             panel4.Controls.Add(Nome);
             panel4.Controls.Add(BT_Cadastrar);
             panel4.Controls.Add(Senha);
-            panel4.Controls.Add(CPF);
             panel4.Controls.Add(Email);
             panel4.Controls.Add(TB_Senha);
-            panel4.Controls.Add(TB_CPF);
             panel4.Controls.Add(TB_Email);
             panel4.Controls.Add(TB_Nome);
             panel4.Font = new Font("Microsoft Sans Serif", 9F);
@@ -167,6 +158,29 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(723, 522);
             panel4.TabIndex = 2;
+            //
+            // PerfilLabel
+            //
+            PerfilLabel.AutoSize = true;
+            PerfilLabel.Font = new Font("Microsoft Sans Serif", 13F);
+            PerfilLabel.Location = new Point(140, 278);
+            PerfilLabel.Margin = new Padding(2, 0, 2, 0);
+            PerfilLabel.Name = "PerfilLabel";
+            PerfilLabel.Size = new Size(52, 22);
+            PerfilLabel.TabIndex = 11;
+            PerfilLabel.Text = "Perfil";
+            //
+            // CMB_Perfil
+            //
+            CMB_Perfil.DropDownStyle = ComboBoxStyle.DropDownList;
+            CMB_Perfil.Font = new Font("Microsoft Sans Serif", 12F);
+            CMB_Perfil.FormattingEnabled = true;
+            CMB_Perfil.Items.AddRange(new object[] { "Cliente", "Analista" });
+            CMB_Perfil.Location = new Point(140, 304);
+            CMB_Perfil.Margin = new Padding(2, 1, 2, 1);
+            CMB_Perfil.Name = "CMB_Perfil";
+            CMB_Perfil.Size = new Size(368, 28);
+            CMB_Perfil.TabIndex = 4;
             // 
             // Nome
             // 
@@ -183,24 +197,12 @@
             // 
             Senha.AutoSize = true;
             Senha.Font = new Font("Microsoft Sans Serif", 13F);
-            Senha.Location = new Point(140, 279);
+            Senha.Location = new Point(140, 216);
             Senha.Margin = new Padding(2, 0, 2, 0);
             Senha.Name = "Senha";
             Senha.Size = new Size(62, 22);
             Senha.TabIndex = 6;
             Senha.Text = "Senha";
-            // 
-            // CPF
-            // 
-            CPF.AutoSize = true;
-            CPF.Font = new Font("Microsoft Sans Serif", 13F);
-            CPF.Location = new Point(140, 216);
-            CPF.Margin = new Padding(2, 0, 2, 0);
-            CPF.Name = "CPF";
-            CPF.Size = new Size(46, 22);
-            CPF.TabIndex = 5;
-            CPF.Text = "CPF";
-            CPF.Click += CPF_Click;
             // 
             // Email
             // 
@@ -270,9 +272,12 @@
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(panel4);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2, 1, 2, 1);
             Name = "Cadastro";
             Text = "Cadastro";
+            WindowState = FormWindowState.Maximized;
+            Resize += Cadastro_Resize;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel4.ResumeLayout(false);
@@ -290,7 +295,6 @@
         private Panel panel2;
         private TextBox TB_Nome;
         private TextBox TB_Email;
-        private TextBox TB_CPF;
         private TextBox TB_Senha;
         private Button BT_Cadastrar;
         private Panel panel4;
@@ -299,9 +303,10 @@
         private Panel panel3;
         private Label label1;
         private Label Senha;
-        private Label CPF;
         private Label Email;
         private Label label2;
         private Label label3;
+        private Label PerfilLabel;
+        private ComboBox CMB_Perfil;
     }
 }

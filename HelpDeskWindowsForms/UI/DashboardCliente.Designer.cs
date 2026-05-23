@@ -56,9 +56,8 @@
             panelHeader.Controls.Add(PB_Logo);
             panelHeader.Dock = DockStyle.Top;
             panelHeader.Location = new Point(0, 0);
-            panelHeader.Margin = new Padding(3, 4, 3, 4);
             panelHeader.Name = "panelHeader";
-            panelHeader.Size = new Size(1366, 104);
+            panelHeader.Size = new Size(1195, 105);
             panelHeader.TabIndex = 0;
             // 
             // PB_IconeUsuario
@@ -66,10 +65,9 @@
             PB_IconeUsuario.BackColor = Color.Transparent;
             PB_IconeUsuario.Dock = DockStyle.Right;
             PB_IconeUsuario.Image = (Image)resources.GetObject("PB_IconeUsuario.Image");
-            PB_IconeUsuario.Location = new Point(1306, 0);
-            PB_IconeUsuario.Margin = new Padding(3, 4, 3, 4);
+            PB_IconeUsuario.Location = new Point(1118, 0);
             PB_IconeUsuario.Name = "PB_IconeUsuario";
-            PB_IconeUsuario.Size = new Size(60, 104);
+            PB_IconeUsuario.Size = new Size(77, 105);
             PB_IconeUsuario.SizeMode = PictureBoxSizeMode.Zoom;
             PB_IconeUsuario.TabIndex = 3;
             PB_IconeUsuario.TabStop = false;
@@ -81,9 +79,9 @@
             lbNomeUsuario.BackColor = Color.Transparent;
             lbNomeUsuario.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbNomeUsuario.ForeColor = Color.White;
-            lbNomeUsuario.Location = new Point(1230, 40);
+            lbNomeUsuario.Location = new Point(1065, 44);
             lbNomeUsuario.Name = "lbNomeUsuario";
-            lbNomeUsuario.Size = new Size(61, 25);
+            lbNomeUsuario.Size = new Size(47, 20);
             lbNomeUsuario.TabIndex = 2;
             lbNomeUsuario.Text = "Maria";
             // 
@@ -93,9 +91,9 @@
             lbTituloSistema.BackColor = Color.Transparent;
             lbTituloSistema.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbTituloSistema.ForeColor = Color.White;
-            lbTituloSistema.Location = new Point(132, 30);
+            lbTituloSistema.Location = new Point(170, 34);
             lbTituloSistema.Name = "lbTituloSistema";
-            lbTituloSistema.Size = new Size(301, 41);
+            lbTituloSistema.Size = new Size(241, 32);
             lbTituloSistema.TabIndex = 1;
             lbTituloSistema.Text = "HelpDesk Pro System";
             // 
@@ -105,24 +103,23 @@
             PB_Logo.Dock = DockStyle.Left;
             PB_Logo.Image = Properties.Resources.logo;
             PB_Logo.Location = new Point(0, 0);
-            PB_Logo.Margin = new Padding(3, 4, 3, 4);
             PB_Logo.Name = "PB_Logo";
-            PB_Logo.Size = new Size(116, 104);
+            PB_Logo.Size = new Size(102, 105);
             PB_Logo.SizeMode = PictureBoxSizeMode.Zoom;
             PB_Logo.TabIndex = 0;
             PB_Logo.TabStop = false;
             // 
             // lbTituloPagina
             // 
-            lbTituloPagina.AutoSize = true;
             lbTituloPagina.BackColor = Color.Transparent;
-            lbTituloPagina.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbTituloPagina.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbTituloPagina.ForeColor = Color.FromArgb(30, 30, 30);
-            lbTituloPagina.Location = new Point(48, 144);
+            lbTituloPagina.Location = new Point(35, 123);
             lbTituloPagina.Name = "lbTituloPagina";
-            lbTituloPagina.Size = new Size(556, 50);
+            lbTituloPagina.Size = new Size(497, 34);
             lbTituloPagina.TabIndex = 1;
             lbTituloPagina.Text = "Acompanhar os meus chamados";
+            lbTituloPagina.Click += lbTituloPagina_Click;
             // 
             // cmbStatus
             // 
@@ -131,9 +128,10 @@
             cmbStatus.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbStatus.FormattingEnabled = true;
             cmbStatus.Items.AddRange(new object[] { "Todos os status", "Aberto", "Em progresso", "Fechado" });
-            cmbStatus.Location = new Point(48, 192);
+            cmbStatus.Location = new Point(35, 159);
+            cmbStatus.Margin = new Padding(3, 2, 3, 2);
             cmbStatus.Name = "cmbStatus";
-            cmbStatus.Size = new Size(260, 33);
+            cmbStatus.Size = new Size(160, 27);
             cmbStatus.TabIndex = 2;
             cmbStatus.SelectedIndexChanged += cmbStatus_SelectedIndexChanged;
             // 
@@ -146,9 +144,10 @@
             btNovoChamado.FlatStyle = FlatStyle.Flat;
             btNovoChamado.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btNovoChamado.ForeColor = Color.FromArgb(40, 40, 40);
-            btNovoChamado.Location = new Point(1115, 185);
+            btNovoChamado.Location = new Point(968, 159);
+            btNovoChamado.Margin = new Padding(3, 2, 3, 2);
             btNovoChamado.Name = "btNovoChamado";
-            btNovoChamado.Size = new Size(200, 40);
+            btNovoChamado.Size = new Size(175, 30);
             btNovoChamado.TabIndex = 3;
             btNovoChamado.Text = "+ Novo Chamado";
             btNovoChamado.UseVisualStyleBackColor = false;
@@ -156,15 +155,17 @@
             // 
             // flowChamados
             // 
+            flowChamados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             flowChamados.AutoScroll = true;
             flowChamados.BackColor = Color.Transparent;
             flowChamados.Controls.Add(cardChamado1);
             flowChamados.Controls.Add(cardChamado2);
             flowChamados.Controls.Add(cardChamado3);
             flowChamados.FlowDirection = FlowDirection.TopDown;
-            flowChamados.Location = new Point(35, 230);
+            flowChamados.Location = new Point(35, 200);
+            flowChamados.Margin = new Padding(3, 2, 3, 2);
             flowChamados.Name = "flowChamados";
-            flowChamados.Size = new Size(1285, 450);
+            flowChamados.Size = new Size(1108, 371);
             flowChamados.TabIndex = 4;
             flowChamados.WrapContents = false;
             // 
@@ -172,51 +173,52 @@
             // 
             cardChamado1.BackColor = Color.FromArgb(17, 27, 58);
             cardChamado1.Location = new Point(0, 0);
-            cardChamado1.Margin = new Padding(0, 0, 0, 10);
+            cardChamado1.Margin = new Padding(0, 0, 0, 8);
             cardChamado1.Name = "cardChamado1";
-            cardChamado1.Size = new Size(1260, 145);
+            cardChamado1.Size = new Size(1102, 109);
             cardChamado1.TabIndex = 0;
             // 
             // cardChamado2
             // 
             cardChamado2.BackColor = Color.FromArgb(17, 27, 58);
-            cardChamado2.Location = new Point(0, 155);
-            cardChamado2.Margin = new Padding(0, 0, 0, 10);
+            cardChamado2.Location = new Point(0, 117);
+            cardChamado2.Margin = new Padding(0, 0, 0, 8);
             cardChamado2.Name = "cardChamado2";
-            cardChamado2.Size = new Size(1260, 145);
+            cardChamado2.Size = new Size(1102, 109);
             cardChamado2.TabIndex = 1;
             // 
             // cardChamado3
             // 
             cardChamado3.BackColor = Color.FromArgb(17, 27, 58);
-            cardChamado3.Location = new Point(0, 310);
-            cardChamado3.Margin = new Padding(0, 0, 0, 10);
+            cardChamado3.Location = new Point(0, 234);
+            cardChamado3.Margin = new Padding(0, 0, 0, 8);
             cardChamado3.Name = "cardChamado3";
-            cardChamado3.Size = new Size(1260, 145);
+            cardChamado3.Size = new Size(1102, 116);
             cardChamado3.TabIndex = 2;
             // 
             // DashboardCliente
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(235, 235, 235);
-            ClientSize = new Size(1366, 768);
+            ClientSize = new Size(1195, 576);
             Controls.Add(flowChamados);
             Controls.Add(btNovoChamado);
             Controls.Add(cmbStatus);
             Controls.Add(lbTituloPagina);
             Controls.Add(panelHeader);
-            Margin = new Padding(3, 4, 3, 4);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "DashboardCliente";
             Text = "DashboardCliente";
+            WindowState = FormWindowState.Maximized;
             Load += DashboardCliente_Load;
+            Resize += DashboardCliente_Resize;
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PB_IconeUsuario).EndInit();
             ((System.ComponentModel.ISupportInitialize)PB_Logo).EndInit();
             flowChamados.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

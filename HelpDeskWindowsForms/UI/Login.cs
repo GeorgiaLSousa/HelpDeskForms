@@ -99,6 +99,7 @@ namespace HelpDeskWindowsForms
 
                 case Perfil.Analista:
                     var dashboardAnalista = _serviceProvider.GetRequiredService<DashboardAnalista>();
+                    dashboardAnalista.Show();
                     Hide();
                     break;
 
