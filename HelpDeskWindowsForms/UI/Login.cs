@@ -1,4 +1,5 @@
 using HelpDeskWindowsForms.Data;
+using HelpDeskWindowsForms.Model;
 using HelpDeskWindowsForms.Repositories;
 using HelpDeskWindowsForms.Service;
 using HelpDeskWindowsForms.UI;
@@ -41,7 +42,7 @@ namespace HelpDeskWindowsForms
         }
         private void label5_Click(object sender, EventArgs e)
         {
-            
+
 
 
 
@@ -71,9 +72,7 @@ namespace HelpDeskWindowsForms
             {
 
                 var usuario = _usuarioService.Login(EmailText.Text, SenhaText.Text);
-                MessageBox.Show("Login realizado com sucesso!");
-
-                this.Hide();
+                RedirecionarUsuario(usuario);
 
             }
             catch
@@ -86,6 +85,27 @@ namespace HelpDeskWindowsForms
         private void Email_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void RedirecionarUsuario(Usuario usuario)
+        {
+            switch (usuario.Perfil)
+            {
+                case Perfil.Cliente:
+                    var dashboardCliente = _serviceProvider.GetRequiredService<DashboardCliente>();
+                    dashboardCliente.Show();
+                    Hide();
+                    break;
+
+                case Perfil.Analista:
+                    var dashboardAnalista = _serviceProvider.GetRequiredService<DashboardAnalista>();
+                    Hide();
+                    break;
+
+                default:
+                    MessageBox.Show("Perfil de usuário inválido.");
+                    break;
+            }
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -106,6 +126,11 @@ namespace HelpDeskWindowsForms
         private void label5_MouseEnter(object sender, EventArgs e)
         {
             label5.ForeColor = Color.Cyan;
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
