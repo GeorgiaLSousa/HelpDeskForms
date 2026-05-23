@@ -29,6 +29,7 @@ namespace HelpDeskWindowsForms.UI
         {
             TB_Nome.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, TB_Nome.Width, TB_Nome.Height, 15, 15));
             TB_Email.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, TB_Email.Width, TB_Email.Height, 15, 15));
+            TB_CPF.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, TB_CPF.Width, TB_CPF.Height, 15, 15));
             TB_Senha.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, TB_Senha.Width, TB_Senha.Height, 15, 15));
             BT_Cadastrar.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, BT_Cadastrar.Width, BT_Cadastrar.Height, 15, 15));
         }
@@ -86,7 +87,7 @@ namespace HelpDeskWindowsForms.UI
         private void CadastrarUsuario()
         {
             if (string.IsNullOrWhiteSpace(TB_Nome.Text) || string.IsNullOrWhiteSpace(TB_Email.Text) ||
-                string.IsNullOrWhiteSpace(TB_Senha.Text))
+                string.IsNullOrWhiteSpace(TB_CPF.Text) || string.IsNullOrWhiteSpace(TB_Senha.Text))
             {
                 MessageBox.Show("Por favor, preencha todos os campos obrigatórios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -98,7 +99,7 @@ namespace HelpDeskWindowsForms.UI
                 {
                     Nome = TB_Nome.Text.Trim(),
                     Email = TB_Email.Text.Trim(),
-                    CPF = string.Empty,
+                    CPF = TB_CPF.Text.Trim(),
                     Senha = TB_Senha.Text,
                     Perfil = ObterPerfilSelecionado()
                 };
@@ -109,6 +110,7 @@ namespace HelpDeskWindowsForms.UI
 
                 TB_Nome.Clear();
                 TB_Email.Clear();
+                TB_CPF.Clear();
                 TB_Senha.Clear();
                 CMB_Perfil.SelectedIndex = 0;
             }
@@ -151,6 +153,9 @@ namespace HelpDeskWindowsForms.UI
             Email.Left = esquerda;
             TB_Email.Left = esquerda;
             TB_Email.Width = larguraCampos;
+            CPF.Left = esquerda;
+            TB_CPF.Left = esquerda;
+            TB_CPF.Width = larguraCampos;
             Senha.Left = esquerda;
             TB_Senha.Left = esquerda;
             TB_Senha.Width = larguraCampos;

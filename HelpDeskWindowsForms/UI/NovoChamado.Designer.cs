@@ -73,7 +73,7 @@
             lbSistema.BackColor = Color.Transparent;
             lbSistema.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbSistema.ForeColor = Color.White;
-            lbSistema.Location = new Point(136, 7);
+            lbSistema.Location = new Point(132, 9);
             lbSistema.Name = "lbSistema";
             lbSistema.Size = new Size(184, 27);
             lbSistema.TabIndex = 1;
