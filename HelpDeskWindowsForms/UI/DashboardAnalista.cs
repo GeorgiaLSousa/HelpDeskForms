@@ -14,5 +14,25 @@ namespace HelpDeskWindowsForms.UI
         {
             InitializeComponent();
         }
+
+        private void DashboardAnalista_Load(object sender, EventArgs e)
+        {
+            cmbStatus.SelectedIndex = 0;
+            cmbAtendimento.SelectedIndex = 0;
+            AjustarCards();
+        }
+
+        private void DashboardAnalista_Resize(object sender, EventArgs e)
+        {
+            AjustarCards();
+        }
+
+        private void AjustarCards()
+        {
+            var largura = Math.Max(600, flowChamados.ClientSize.Width - 24);
+            cardChamado1.Width = largura;
+            cardChamado2.Width = largura;
+            cardChamado3.Width = largura;
+        }
     }
 }

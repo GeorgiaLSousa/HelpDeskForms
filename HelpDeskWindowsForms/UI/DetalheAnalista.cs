@@ -45,8 +45,7 @@ namespace HelpDeskWindowsForms.UI
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
             // O 'sender' é o painel que está sendo pintado
-            Panel p = sender as Panel;
-            if (p == null) return;
+            if (sender is not Panel p) return;
 
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
             int raio = 20; // Ajuste conforme necessário
@@ -64,8 +63,7 @@ namespace HelpDeskWindowsForms.UI
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
             // O 'sender' é o painel que está sendo pintado
-            Panel p = sender as Panel;
-            if (p == null) return;
+            if (sender is not Panel p) return;
 
             // Melhora a qualidade do desenho para não serrilhar
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
@@ -90,8 +88,7 @@ namespace HelpDeskWindowsForms.UI
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
-            Panel p = sender as Panel;
-            if (p == null) return;
+            if (sender is not Panel p) return;
 
             e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 

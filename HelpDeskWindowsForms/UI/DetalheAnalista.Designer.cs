@@ -665,6 +665,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "DetalheAnalista";
+            WindowState = FormWindowState.Maximized;
             Load += DetalheAnalista_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

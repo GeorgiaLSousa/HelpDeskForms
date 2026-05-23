@@ -72,6 +72,7 @@
             // 
             // lblUsuario
             // 
+            lblUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUsuario.ForeColor = Color.White;
@@ -141,6 +142,7 @@
             // 
             // flowChamados
             // 
+            flowChamados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             flowChamados.AutoScroll = true;
             flowChamados.Controls.Add(cardChamado1);
             flowChamados.Controls.Add(cardChamado2);
@@ -194,6 +196,9 @@
             Name = "DashboardAnalista";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "DashboardAnalista";
+            WindowState = FormWindowState.Maximized;
+            Load += DashboardAnalista_Load;
+            Resize += DashboardAnalista_Resize;
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

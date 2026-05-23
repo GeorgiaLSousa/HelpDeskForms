@@ -292,6 +292,7 @@
             Text = "NovoChamado";
             WindowState = FormWindowState.Maximized;
             Load += NovoChamado_Load;
+            Resize += NovoChamado_Resize;
             panelHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pctLogo).EndInit();
             panel1.ResumeLayout(false);

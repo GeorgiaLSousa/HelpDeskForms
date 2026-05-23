@@ -155,6 +155,7 @@
             // 
             // flowChamados
             // 
+            flowChamados.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             flowChamados.AutoScroll = true;
             flowChamados.BackColor = Color.Transparent;
             flowChamados.Controls.Add(cardChamado1);
@@ -209,7 +210,9 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "DashboardCliente";
             Text = "DashboardCliente";
+            WindowState = FormWindowState.Maximized;
             Load += DashboardCliente_Load;
+            Resize += DashboardCliente_Resize;
             panelHeader.ResumeLayout(false);
             panelHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PB_IconeUsuario).EndInit();
