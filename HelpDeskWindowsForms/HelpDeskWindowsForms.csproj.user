@@ -5,10 +5,7 @@
     <Compile Update="UI\Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="UI\DashboardAnalista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="UI\DashboardCliente.cs">
+    <Compile Update="UI\DetalheAnalista.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UI\Login.cs">
