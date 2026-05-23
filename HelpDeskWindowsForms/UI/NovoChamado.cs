@@ -50,5 +50,10 @@ namespace HelpDeskWindowsForms.UI
             panelForm.Left = Math.Max(24, (panelConteudo.ClientSize.Width - panelForm.Width) / 2);
             panelForm.Top = Math.Max(24, (panelConteudo.ClientSize.Height - panelForm.Height) / 2);
         }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
