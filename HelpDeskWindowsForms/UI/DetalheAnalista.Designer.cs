@@ -70,7 +70,6 @@
             label1 = new Label();
             panel4 = new Panel();
             panel9 = new Panel();
-            label6 = new Label();
             panel8 = new Panel();
             label5 = new Label();
             panel7 = new Panel();
@@ -79,6 +78,7 @@
             label3 = new Label();
             panel5 = new Panel();
             label2 = new Label();
+            label6 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -113,7 +113,7 @@
             // 
             // label9
             // 
-            label9.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.White;
             label9.Location = new Point(268, 12);
             label9.Name = "label9";
@@ -181,17 +181,17 @@
             // 
             label24.AutoSize = true;
             label24.CausesValidation = false;
-            label24.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label24.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label24.ForeColor = Color.White;
             label24.Location = new Point(563, 344);
             label24.Name = "label24";
-            label24.Size = new Size(199, 34);
+            label24.Size = new Size(174, 24);
             label24.TabIndex = 24;
             label24.Text = "01/04/2026 ás 16:30";
             // 
             // label23
             // 
-            label23.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label23.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label23.ForeColor = Color.FromArgb(152, 145, 145);
             label23.Location = new Point(563, 321);
             label23.Name = "label23";
@@ -201,7 +201,7 @@
             // 
             // label22
             // 
-            label22.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label22.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label22.ForeColor = Color.White;
             label22.Location = new Point(560, 272);
             label22.Name = "label22";
@@ -211,7 +211,7 @@
             // 
             // label21
             // 
-            label21.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label21.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label21.ForeColor = Color.FromArgb(152, 145, 145);
             label21.Location = new Point(560, 248);
             label21.Name = "label21";
@@ -222,7 +222,7 @@
             // 
             // label20
             // 
-            label20.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label20.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label20.ForeColor = Color.White;
             label20.Location = new Point(66, 415);
             label20.Name = "label20";
@@ -232,7 +232,7 @@
             // 
             // label19
             // 
-            label19.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label19.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.FromArgb(152, 145, 145);
             label19.Location = new Point(66, 390);
             label19.Name = "label19";
@@ -242,7 +242,7 @@
             // 
             // label18
             // 
-            label18.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label18.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.White;
             label18.Location = new Point(66, 344);
             label18.Name = "label18";
@@ -252,7 +252,7 @@
             // 
             // label17
             // 
-            label17.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label17.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.FromArgb(152, 145, 145);
             label17.Location = new Point(66, 321);
             label17.Name = "label17";
@@ -262,7 +262,7 @@
             // 
             // label16
             // 
-            label16.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label16.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.White;
             label16.Location = new Point(66, 272);
             label16.Name = "label16";
@@ -272,7 +272,7 @@
             // 
             // label15
             // 
-            label15.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.FromArgb(152, 145, 145);
             label15.Location = new Point(66, 248);
             label15.Name = "label15";
@@ -333,7 +333,7 @@
             // 
             // label14
             // 
-            label14.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.White;
             label14.Location = new Point(24, 171);
             label14.Name = "label14";
@@ -353,7 +353,7 @@
             // 
             // label12
             // 
-            label12.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.FromArgb(152, 145, 145);
             label12.Location = new Point(24, 124);
             label12.Name = "label12";
@@ -364,7 +364,7 @@
             // 
             // label11
             // 
-            label11.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.White;
             label11.Location = new Point(24, 67);
             label11.Name = "label11";
@@ -376,7 +376,7 @@
             // label10
             // 
             label10.BackColor = Color.Transparent;
-            label10.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.FromArgb(152, 145, 145);
             label10.Location = new Point(24, 21);
             label10.Name = "label10";
@@ -404,7 +404,7 @@
             // 
             // label8
             // 
-            label8.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(164, 0, 0);
             label8.Location = new Point(0, 0);
             label8.Name = "label8";
@@ -425,7 +425,7 @@
             // 
             // label7
             // 
-            label7.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.Location = new Point(1, 0);
             label7.Name = "label7";
             label7.Size = new Size(103, 28);
@@ -450,11 +450,11 @@
             // label29
             // 
             label29.AutoSize = true;
-            label29.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label29.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label29.ForeColor = Color.FromArgb(18, 25, 47);
             label29.Location = new Point(446, 10);
             label29.Name = "label29";
-            label29.Size = new Size(165, 28);
+            label29.Size = new Size(154, 20);
             label29.TabIndex = 25;
             label29.Text = "01/04/2026 às 16:30";
             label29.Click += label29_Click;
@@ -462,33 +462,33 @@
             // label28
             // 
             label28.AutoSize = true;
-            label28.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label28.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label28.ForeColor = Color.FromArgb(152, 145, 145);
             label28.Location = new Point(386, 10);
             label28.Name = "label28";
-            label28.Size = new Size(54, 28);
+            label28.Size = new Size(48, 20);
             label28.TabIndex = 3;
             label28.Text = "Data:";
             // 
             // label27
             // 
             label27.AutoSize = true;
-            label27.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label27.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label27.ForeColor = Color.FromArgb(18, 25, 47);
             label27.Location = new Point(12, 38);
             label27.Name = "label27";
-            label27.Size = new Size(455, 28);
+            label27.Size = new Size(404, 20);
             label27.TabIndex = 2;
             label27.Text = "Ajustamos o erro, e já está funcionando, poderia testar?\r\n";
             // 
             // label26
             // 
             label26.AutoSize = true;
-            label26.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label26.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label26.ForeColor = Color.FromArgb(18, 25, 47);
             label26.Location = new Point(134, 10);
             label26.Name = "label26";
-            label26.Size = new Size(117, 28);
+            label26.Size = new Size(103, 20);
             label26.TabIndex = 1;
             label26.Text = "Georgia Ligia";
             label26.Click += label26_Click;
@@ -496,11 +496,11 @@
             // label25
             // 
             label25.AutoSize = true;
-            label25.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label25.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label25.ForeColor = Color.FromArgb(152, 145, 145);
             label25.Location = new Point(12, 10);
             label25.Name = "label25";
-            label25.Size = new Size(116, 28);
+            label25.Size = new Size(105, 20);
             label25.TabIndex = 0;
             label25.Text = "Responsável:";
             // 
@@ -526,7 +526,7 @@
             // label1
             // 
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
             label1.Location = new Point(-3, 31);
             label1.Name = "label1";
@@ -545,7 +545,7 @@
             panel4.Controls.Add(label1);
             panel4.Location = new Point(927, 146);
             panel4.Name = "panel4";
-            panel4.Size = new Size(393, 332);
+            panel4.Size = new Size(393, 335);
             panel4.TabIndex = 4;
             panel4.Paint += panel4_Paint;
             // 
@@ -559,17 +559,6 @@
             panel9.TabIndex = 5;
             panel9.Paint += panel5_Paint;
             // 
-            // label6
-            // 
-            label6.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(0, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(242, 38);
-            label6.TabIndex = 5;
-            label6.Text = "Assumir chamado";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // panel8
             // 
             panel8.BackColor = Color.FromArgb(25, 31, 52);
@@ -582,7 +571,7 @@
             // 
             // label5
             // 
-            label5.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.White;
             label5.Location = new Point(0, 0);
             label5.Name = "label5";
@@ -603,7 +592,7 @@
             // 
             // label4
             // 
-            label4.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
             label4.Location = new Point(0, 0);
             label4.Name = "label4";
@@ -624,7 +613,7 @@
             // 
             // label3
             // 
-            label3.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(0, 0);
             label3.Name = "label3";
             label3.Size = new Size(176, 38);
@@ -645,13 +634,24 @@
             // 
             // label2
             // 
-            label2.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
             label2.Size = new Size(176, 38);
             label2.TabIndex = 0;
             label2.Text = "Status:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            label6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(-3, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(242, 38);
+            label6.TabIndex = 5;
+            label6.Text = "Assumir chamado";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // DetalheAnalista
             // 
@@ -708,7 +708,6 @@
         private Label label3;
         private Label label2;
         private Panel panel9;
-        private Label label6;
         private Label label5;
         private Panel panel10;
         private Panel panel12;
@@ -742,5 +741,6 @@
         private Label label27;
         private Label label26;
         private Label label25;
+        private Label label6;
     }
 }
