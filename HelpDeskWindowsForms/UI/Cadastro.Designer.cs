@@ -270,6 +270,7 @@
             Controls.Add(panel3);
             Controls.Add(panel1);
             Controls.Add(panel4);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2, 1, 2, 1);
             Name = "Cadastro";
             Text = "Cadastro";

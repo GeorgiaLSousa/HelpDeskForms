@@ -286,9 +286,11 @@
             Controls.Add(panelConteudo);
             Controls.Add(panel1);
             Controls.Add(panelHeader);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "NovoChamado";
             Text = "NovoChamado";
+            WindowState = FormWindowState.Maximized;
             Load += NovoChamado_Load;
             panelHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pctLogo).EndInit();

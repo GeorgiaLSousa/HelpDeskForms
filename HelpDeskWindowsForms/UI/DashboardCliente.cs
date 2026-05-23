@@ -23,13 +23,18 @@ namespace HelpDeskWindowsForms.UI
 
         private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void DashboardCliente_Load(object sender, EventArgs e)
         {
             cmbStatus.SelectedIndex = 0;
             this.ActiveControl = lbTituloPagina;
+        }
+
+        private void lbTituloPagina_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
