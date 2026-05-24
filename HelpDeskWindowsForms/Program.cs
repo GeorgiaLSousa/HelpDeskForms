@@ -34,6 +34,7 @@ namespace HelpDeskWindowsForms
             services.AddTransient<Cadastro>();
             services.AddTransient<DetalheAnalista>();
             services.AddTransient<DatalhesdoUsuario>();
+            services.AddTransient<AtualizarChamado>();
 
             ServiceProvider = services.BuildServiceProvider();
 
