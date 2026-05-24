@@ -54,7 +54,8 @@ namespace HelpDeskWindowsForms
             }
 
             // Iniciar a aplicação resolvendo o formulário inicial da Injeção de Dependências
-            Application.Run(ServiceProvider.GetRequiredService<DatalhesdoUsuario>());
+            // Iniciar a aplicação resolvendo o formulário 'DetalheAnalista' através da injeção de dependência
+            Application.Run(ServiceProvider.GetRequiredService<Login>());
         }
     }
 }
