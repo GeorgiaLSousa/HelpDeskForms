@@ -1,6 +1,6 @@
 ﻿namespace HelpDeskWindowsForms.UI
 {
-    partial class DetalheAnalista
+    partial class DatalhesdoUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetalheAnalista));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatalhesdoUsuario));
             panel1 = new Panel();
             label9 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
+            pictureBox3 = new PictureBox();
             panel2 = new Panel();
             label24 = new Label();
             label23 = new Label();
@@ -65,23 +66,23 @@
             label27 = new Label();
             label26 = new Label();
             label25 = new Label();
-            pictureBox3 = new PictureBox();
             panel3 = new Panel();
-            label1 = new Label();
-            panel4 = new Panel();
-            panel9 = new Panel();
-            label6 = new Label();
-            panel8 = new Panel();
-            label5 = new Label();
-            panel7 = new Panel();
-            label4 = new Label();
-            panel6 = new Panel();
-            label3 = new Label();
-            panel5 = new Panel();
-            label2 = new Label();
+            panel14 = new Panel();
+            panel16 = new Panel();
+            label31 = new Label();
+            panel17 = new Panel();
+            label32 = new Label();
+            panel18 = new Panel();
+            label33 = new Label();
+            panel19 = new Panel();
+            label34 = new Label();
+            label35 = new Label();
+            panel15 = new Panel();
+            label30 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -91,14 +92,13 @@
             panel12.SuspendLayout();
             panel11.SuspendLayout();
             panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel3.SuspendLayout();
-            panel4.SuspendLayout();
-            panel9.SuspendLayout();
-            panel8.SuspendLayout();
-            panel7.SuspendLayout();
-            panel6.SuspendLayout();
-            panel5.SuspendLayout();
+            panel14.SuspendLayout();
+            panel16.SuspendLayout();
+            panel17.SuspendLayout();
+            panel18.SuspendLayout();
+            panel19.SuspendLayout();
+            panel15.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -107,22 +107,22 @@
             panel1.Controls.Add(label9);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(-1, 0);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1370, 68);
-            panel1.TabIndex = 0;
+            panel1.TabIndex = 2;
+            panel1.Paint += panel1_Paint;
             // 
             // label9
             // 
-            label9.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(268, 12);
+            label9.Location = new Point(175, 12);
             label9.Name = "label9";
             label9.Size = new Size(372, 38);
             label9.TabIndex = 4;
             label9.Text = "HelpDeskd Pro System";
             label9.TextAlign = ContentAlignment.MiddleCenter;
-            label9.Click += label9_Click;
             // 
             // pictureBox2
             // 
@@ -133,7 +133,6 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
             // 
             // pictureBox1
             // 
@@ -144,6 +143,16 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(0, 85);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(100, 50);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
             // 
             // panel2
             // 
@@ -172,27 +181,27 @@
             panel2.Controls.Add(panel12);
             panel2.Controls.Add(panel11);
             panel2.Controls.Add(panel10);
-            panel2.Location = new Point(24, 143);
+            panel2.Location = new Point(28, 158);
             panel2.Name = "panel2";
             panel2.Size = new Size(846, 586);
-            panel2.TabIndex = 1;
+            panel2.TabIndex = 5;
             panel2.Paint += panel2_Paint;
             // 
             // label24
             // 
             label24.AutoSize = true;
             label24.CausesValidation = false;
-            label24.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label24.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label24.ForeColor = Color.White;
             label24.Location = new Point(563, 344);
             label24.Name = "label24";
-            label24.Size = new Size(174, 24);
+            label24.Size = new Size(199, 34);
             label24.TabIndex = 24;
             label24.Text = "01/04/2026 ás 16:30";
             // 
             // label23
             // 
-            label23.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label23.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label23.ForeColor = Color.FromArgb(152, 145, 145);
             label23.Location = new Point(563, 321);
             label23.Name = "label23";
@@ -202,7 +211,7 @@
             // 
             // label22
             // 
-            label22.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label22.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label22.ForeColor = Color.White;
             label22.Location = new Point(560, 272);
             label22.Name = "label22";
@@ -212,18 +221,17 @@
             // 
             // label21
             // 
-            label21.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label21.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label21.ForeColor = Color.FromArgb(152, 145, 145);
             label21.Location = new Point(560, 248);
             label21.Name = "label21";
             label21.Size = new Size(167, 29);
             label21.TabIndex = 21;
             label21.Text = "Responsável";
-            label21.Click += label21_Click;
             // 
             // label20
             // 
-            label20.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label20.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label20.ForeColor = Color.White;
             label20.Location = new Point(66, 415);
             label20.Name = "label20";
@@ -233,7 +241,7 @@
             // 
             // label19
             // 
-            label19.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label19.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.FromArgb(152, 145, 145);
             label19.Location = new Point(66, 390);
             label19.Name = "label19";
@@ -243,7 +251,7 @@
             // 
             // label18
             // 
-            label18.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label18.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label18.ForeColor = Color.White;
             label18.Location = new Point(66, 344);
             label18.Name = "label18";
@@ -253,7 +261,7 @@
             // 
             // label17
             // 
-            label17.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label17.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.FromArgb(152, 145, 145);
             label17.Location = new Point(66, 321);
             label17.Name = "label17";
@@ -263,7 +271,7 @@
             // 
             // label16
             // 
-            label16.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label16.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.White;
             label16.Location = new Point(66, 272);
             label16.Name = "label16";
@@ -273,7 +281,7 @@
             // 
             // label15
             // 
-            label15.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label15.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.FromArgb(152, 145, 145);
             label15.Location = new Point(66, 248);
             label15.Name = "label15";
@@ -290,7 +298,6 @@
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox8.TabIndex = 14;
             pictureBox8.TabStop = false;
-            pictureBox8.Click += pictureBox8_Click;
             // 
             // pictureBox7
             // 
@@ -320,7 +327,6 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 11;
             pictureBox5.TabStop = false;
-            pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox4
             // 
@@ -334,14 +340,13 @@
             // 
             // label14
             // 
-            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label14.ForeColor = Color.White;
             label14.Location = new Point(24, 171);
             label14.Name = "label14";
             label14.Size = new Size(688, 47);
             label14.TabIndex = 9;
             label14.Text = "Usuários estão relatando dificuldade para acessar o sistema. \r\nO botão de login não responde após inserir as credenciais.";
-            label14.Click += label14_Click;
             // 
             // label13
             // 
@@ -354,30 +359,28 @@
             // 
             // label12
             // 
-            label12.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.FromArgb(152, 145, 145);
             label12.Location = new Point(24, 124);
             label12.Name = "label12";
             label12.Size = new Size(129, 29);
             label12.TabIndex = 7;
             label12.Text = "Descrição";
-            label12.Click += label12_Click;
             // 
             // label11
             // 
-            label11.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.ForeColor = Color.White;
             label11.Location = new Point(24, 67);
             label11.Name = "label11";
             label11.Size = new Size(337, 23);
             label11.TabIndex = 6;
             label11.Text = "Problema no sistema de login";
-            label11.Click += label11_Click;
             // 
             // label10
             // 
             label10.BackColor = Color.Transparent;
-            label10.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.FromArgb(152, 145, 145);
             label10.Location = new Point(24, 21);
             label10.Name = "label10";
@@ -401,11 +404,11 @@
             panel12.Name = "panel12";
             panel12.Size = new Size(68, 28);
             panel12.TabIndex = 2;
-            panel12.Paint += panel5_Paint;
+            panel12.Paint += panel12_Paint;
             // 
             // label8
             // 
-            label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(164, 0, 0);
             label8.Location = new Point(0, 0);
             label8.Name = "label8";
@@ -413,6 +416,7 @@
             label8.TabIndex = 0;
             label8.Text = "Alta";
             label8.TextAlign = ContentAlignment.MiddleCenter;
+            label8.Click += label8_Click;
             // 
             // panel11
             // 
@@ -422,17 +426,18 @@
             panel11.Name = "panel11";
             panel11.Size = new Size(104, 28);
             panel11.TabIndex = 1;
-            panel11.Paint += panel5_Paint;
+            panel11.Paint += panel11_Paint;
             // 
             // label7
             // 
-            label7.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(1, 0);
+            label7.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(3, 0);
             label7.Name = "label7";
             label7.Size = new Size(103, 28);
             label7.TabIndex = 3;
             label7.Text = "Aberto";
             label7.TextAlign = ContentAlignment.MiddleCenter;
+            label7.Click += label7_Click;
             // 
             // panel10
             // 
@@ -446,231 +451,224 @@
             panel10.Name = "panel10";
             panel10.Size = new Size(817, 96);
             panel10.TabIndex = 0;
-            panel10.Paint += panel5_Paint;
+            panel10.Paint += panel10_Paint;
             // 
             // label29
             // 
             label29.AutoSize = true;
-            label29.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label29.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label29.ForeColor = Color.FromArgb(18, 25, 47);
             label29.Location = new Point(446, 10);
             label29.Name = "label29";
-            label29.Size = new Size(154, 20);
+            label29.Size = new Size(165, 28);
             label29.TabIndex = 25;
             label29.Text = "01/04/2026 às 16:30";
-            label29.Click += label29_Click;
             // 
             // label28
             // 
             label28.AutoSize = true;
-            label28.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label28.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label28.ForeColor = Color.FromArgb(152, 145, 145);
             label28.Location = new Point(386, 10);
             label28.Name = "label28";
-            label28.Size = new Size(48, 20);
+            label28.Size = new Size(54, 28);
             label28.TabIndex = 3;
             label28.Text = "Data:";
             // 
             // label27
             // 
             label27.AutoSize = true;
-            label27.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label27.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label27.ForeColor = Color.FromArgb(18, 25, 47);
             label27.Location = new Point(12, 38);
             label27.Name = "label27";
-            label27.Size = new Size(404, 20);
+            label27.Size = new Size(455, 28);
             label27.TabIndex = 2;
             label27.Text = "Ajustamos o erro, e já está funcionando, poderia testar?\r\n";
             // 
             // label26
             // 
             label26.AutoSize = true;
-            label26.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label26.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label26.ForeColor = Color.FromArgb(18, 25, 47);
             label26.Location = new Point(134, 10);
             label26.Name = "label26";
-            label26.Size = new Size(103, 20);
+            label26.Size = new Size(117, 28);
             label26.TabIndex = 1;
             label26.Text = "Georgia Ligia";
-            label26.Click += label26_Click;
             // 
             // label25
             // 
             label25.AutoSize = true;
-            label25.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label25.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label25.ForeColor = Color.FromArgb(152, 145, 145);
             label25.Location = new Point(12, 10);
             label25.Name = "label25";
-            label25.Size = new Size(105, 20);
+            label25.Size = new Size(116, 28);
             label25.TabIndex = 0;
             label25.Text = "Responsável:";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(12, 74);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(100, 50);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 2;
-            pictureBox3.TabStop = false;
             // 
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(18, 25, 47);
-            panel3.Controls.Add(panel4);
-            panel3.Location = new Point(924, 143);
+            panel3.Controls.Add(panel14);
+            panel3.Location = new Point(945, 158);
             panel3.Name = "panel3";
             panel3.Size = new Size(399, 338);
-            panel3.TabIndex = 3;
+            panel3.TabIndex = 6;
             panel3.Paint += panel3_Paint;
             // 
-            // label1
+            // panel14
             // 
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(-3, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(399, 31);
-            label1.TabIndex = 0;
-            label1.Text = "Indormações sobre o chamado";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            panel14.BackColor = Color.White;
+            panel14.Controls.Add(panel16);
+            panel14.Controls.Add(panel17);
+            panel14.Controls.Add(panel18);
+            panel14.Controls.Add(panel19);
+            panel14.Controls.Add(label35);
+            panel14.Location = new Point(3, 3);
+            panel14.Name = "panel14";
+            panel14.Size = new Size(393, 332);
+            panel14.TabIndex = 4;
+            panel14.Paint += panel14_Paint;
             // 
-            // panel4
+            // panel16
             // 
-            panel4.Controls.Add(panel9);
-            panel4.Controls.Add(panel8);
-            panel4.Controls.Add(panel7);
-            panel4.Controls.Add(panel6);
-            panel4.Controls.Add(panel5);
-            panel4.Controls.Add(label1);
-            panel4.Location = new Point(6, 38);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(393, 335);
-            panel4.TabIndex = 4;
-            panel4.Paint += panel4_Paint;
+            panel16.BackColor = Color.FromArgb(25, 31, 52);
+            panel16.Controls.Add(label31);
+            panel16.Location = new Point(201, 199);
+            panel16.Name = "panel16";
+            panel16.Size = new Size(179, 38);
+            panel16.TabIndex = 4;
+            panel16.Paint += panel16_Paint;
             // 
-            // panel9
+            // label31
             // 
-            panel9.BackColor = Color.FromArgb(37, 31, 52);
-            panel9.Controls.Add(label6);
-            panel9.Location = new Point(84, 272);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(242, 38);
-            panel9.TabIndex = 5;
-            panel9.Paint += panel5_Paint;
+            label31.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label31.ForeColor = Color.White;
+            label31.Location = new Point(0, 0);
+            label31.Name = "label31";
+            label31.Size = new Size(179, 38);
+            label31.TabIndex = 0;
+            label31.Text = "Alta";
+            label31.TextAlign = ContentAlignment.MiddleCenter;
+            label31.Click += label31_Click;
             // 
-            // label6
+            // panel17
             // 
-            label6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(-3, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(242, 38);
-            label6.TabIndex = 5;
-            label6.Text = "Assumir chamado";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
+            panel17.BackColor = Color.FromArgb(25, 31, 52);
+            panel17.Controls.Add(label32);
+            panel17.Location = new Point(201, 121);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(179, 38);
+            panel17.TabIndex = 3;
+            panel17.Paint += panel17_Paint;
             // 
-            // panel8
+            // label32
             // 
-            panel8.BackColor = Color.FromArgb(25, 31, 52);
-            panel8.Controls.Add(label5);
-            panel8.Location = new Point(201, 199);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(179, 38);
-            panel8.TabIndex = 4;
-            panel8.Paint += panel5_Paint;
+            label32.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label32.ForeColor = Color.White;
+            label32.Location = new Point(0, 0);
+            label32.Name = "label32";
+            label32.Size = new Size(179, 38);
+            label32.TabIndex = 0;
+            label32.Text = "Aberto";
+            label32.TextAlign = ContentAlignment.MiddleCenter;
+            label32.Click += label32_Click;
             // 
-            // label5
+            // panel18
             // 
-            label5.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(0, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(179, 38);
-            label5.TabIndex = 0;
-            label5.Text = "Alta";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
+            panel18.BackColor = Color.FromArgb(183, 187, 202);
+            panel18.Controls.Add(label33);
+            panel18.Location = new Point(25, 199);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(179, 38);
+            panel18.TabIndex = 2;
+            panel18.Paint += panel18_Paint;
             // 
-            // panel7
+            // label33
             // 
-            panel7.BackColor = Color.FromArgb(25, 31, 52);
-            panel7.Controls.Add(label4);
-            panel7.Location = new Point(201, 121);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(179, 38);
-            panel7.TabIndex = 3;
-            panel7.Paint += panel5_Paint;
+            label33.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label33.Location = new Point(0, 0);
+            label33.Name = "label33";
+            label33.Size = new Size(176, 38);
+            label33.TabIndex = 0;
+            label33.Text = "Prioridade:";
+            label33.TextAlign = ContentAlignment.MiddleCenter;
+            label33.Click += label33_Click;
             // 
-            // label4
+            // panel19
             // 
-            label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(-3, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(179, 38);
-            label4.TabIndex = 0;
-            label4.Text = "Aberto";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
+            panel19.BackColor = Color.FromArgb(183, 187, 202);
+            panel19.Controls.Add(label34);
+            panel19.Location = new Point(25, 121);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(179, 38);
+            panel19.TabIndex = 1;
+            panel19.Paint += panel19_Paint;
             // 
-            // panel6
+            // label34
             // 
-            panel6.BackColor = Color.FromArgb(183, 187, 202);
-            panel6.Controls.Add(label3);
-            panel6.Location = new Point(25, 199);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(179, 38);
-            panel6.TabIndex = 2;
-            panel6.Paint += panel5_Paint;
+            label34.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label34.Location = new Point(0, 0);
+            label34.Name = "label34";
+            label34.Size = new Size(176, 38);
+            label34.TabIndex = 0;
+            label34.Text = "Status:";
+            label34.TextAlign = ContentAlignment.MiddleCenter;
+            label34.Click += label34_Click;
             // 
-            // label3
+            // label35
             // 
-            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(0, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(176, 38);
-            label3.TabIndex = 0;
-            label3.Text = "Prioridade:";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            label3.Click += DetalheAnalista_Load;
+            label35.BackColor = Color.Transparent;
+            label35.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label35.ForeColor = Color.Black;
+            label35.Location = new Point(-3, 31);
+            label35.Name = "label35";
+            label35.Size = new Size(399, 31);
+            label35.TabIndex = 0;
+            label35.Text = "Indormações sobre o chamado";
+            label35.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel5
+            // panel15
             // 
-            panel5.BackColor = Color.FromArgb(183, 187, 202);
-            panel5.Controls.Add(label2);
-            panel5.Location = new Point(25, 121);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(179, 38);
-            panel5.TabIndex = 1;
-            panel5.Paint += panel5_Paint;
+            panel15.BackColor = Color.FromArgb(37, 31, 52);
+            panel15.Controls.Add(label30);
+            panel15.Location = new Point(1035, 572);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(242, 38);
+            panel15.TabIndex = 5;
+            panel15.Paint += panel15_Paint;
             // 
-            // label2
+            // label30
             // 
-            label2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(3, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(176, 38);
-            label2.TabIndex = 0;
-            label2.Text = "Status:";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label30.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label30.ForeColor = Color.White;
+            label30.Location = new Point(0, 0);
+            label30.Name = "label30";
+            label30.Size = new Size(242, 38);
+            label30.TabIndex = 5;
+            label30.Text = "Assumir chamado";
+            label30.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // DetalheAnalista
+            // DatalhesdoUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1366, 768);
+            Controls.Add(panel15);
             Controls.Add(panel3);
-            Controls.Add(pictureBox3);
             Controls.Add(panel2);
+            Controls.Add(pictureBox3);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "DetalheAnalista";
-            WindowState = FormWindowState.Maximized;
-            Load += DetalheAnalista_Load;
+            Name = "DatalhesdoUsuario";
+            Text = "DatalhesdoUsuario";
+            Load += DatalhesdoUsuario_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
@@ -682,53 +680,25 @@
             panel11.ResumeLayout(false);
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel3.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel9.ResumeLayout(false);
-            panel8.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel6.ResumeLayout(false);
-            panel5.ResumeLayout(false);
+            panel14.ResumeLayout(false);
+            panel16.ResumeLayout(false);
+            panel17.ResumeLayout(false);
+            panel18.ResumeLayout(false);
+            panel19.ResumeLayout(false);
+            panel15.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private Panel panel2;
-        private PictureBox pictureBox3;
-        private Panel panel3;
-        private Label label1;
-        private Panel panel4;
-        private Panel panel8;
-        private Panel panel7;
-        private Panel panel6;
-        private Panel panel5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Panel panel9;
-        private Label label5;
-        private Panel panel10;
-        private Panel panel12;
-        private Panel panel11;
-        private Label label7;
-        private Label label8;
-        private Panel panel13;
         private Label label9;
-        private Label label11;
-        private Label label10;
-        private Label label12;
-        private Label label14;
-        private Label label13;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox6;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox3;
+        private Panel panel2;
+        private Label label24;
         private Label label23;
         private Label label22;
         private Label label21;
@@ -738,12 +708,39 @@
         private Label label17;
         private Label label16;
         private Label label15;
-        private Label label24;
+        private PictureBox pictureBox8;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
+        private Label label14;
+        private Label label13;
+        private Label label12;
+        private Label label11;
+        private Label label10;
+        private Panel panel13;
+        private Panel panel12;
+        private Label label8;
+        private Panel panel11;
+        private Label label7;
+        private Panel panel10;
         private Label label29;
         private Label label28;
         private Label label27;
         private Label label26;
         private Label label25;
-        private Label label6;
+        private Panel panel3;
+        private Panel panel14;
+        private Panel panel15;
+        private Label label30;
+        private Panel panel16;
+        private Label label31;
+        private Panel panel17;
+        private Label label32;
+        private Panel panel18;
+        private Label label33;
+        private Panel panel19;
+        private Label label34;
+        private Label label35;
     }
 }
