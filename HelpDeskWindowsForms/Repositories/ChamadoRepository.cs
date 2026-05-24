@@ -1,6 +1,5 @@
 ﻿using HelpDeskWindowsForms.Data;
 using HelpDeskWindowsForms.Model;
-using HelpDeskWindowsForms.Service;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -19,6 +18,13 @@ namespace HelpDeskWindowsForms.Repositories
             _context.Chamados.Add(chamado);
             _context.SaveChanges();
         }
+        public List<Chamado> ObterChamadosPorUsuario(int usuarioId)
+        {
+            return _context.Chamados
+                .Where(chamado => chamado.UsuarioId == usuarioId)
+                .ToList();
+        }
+
         public List<Chamado> ObterTodosChamados()
         {
             return _context.Chamados.ToList();
