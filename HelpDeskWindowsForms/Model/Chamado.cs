@@ -21,6 +21,10 @@ namespace HelpDeskWindowsForms.Model
 
        public required DateTime DataAbertura { get; set; }
 
+       public int UsuarioId { get; set; }
+       
+        public Usuario? Usuario { get; set; }
+
     }
 
     public enum Prioridade

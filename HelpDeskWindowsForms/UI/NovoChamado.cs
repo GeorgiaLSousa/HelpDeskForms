@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using HelpDeskWindowsForms.Model;
+using HelpDeskWindowsForms.Service;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HelpDeskWindowsForms.UI
@@ -12,15 +14,17 @@ namespace HelpDeskWindowsForms.UI
     public partial class NovoChamado : Form
     {
         private readonly IServiceProvider _serviceProvider = null!;
+        private readonly ChamadoService _chamadoService = null!;
 
         public NovoChamado()
         {
             InitializeComponent();
         }
 
-        public NovoChamado(IServiceProvider serviceProvider) : this()
+        public NovoChamado(IServiceProvider serviceProvider, ChamadoService chamadoService) : this()
         {
             _serviceProvider = serviceProvider;
+            _chamadoService = chamadoService;
         }
 
         private void NovoChamado_Load(object sender, EventArgs e)
@@ -53,6 +57,37 @@ namespace HelpDeskWindowsForms.UI
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (SessaoUsuario.UsuarioLogado == null)
+                {
+                    MessageBox.Show("Usuário não identificado. Faça login novamente.");
+                    return;
+                }
+
+                var chamado = new Chamado
+                {
+                    Titulo = txbTitulo.Text.Trim(),
+                    Descricao = txbDescricao.Text.Trim(),
+                    Prioridade = cmbPrioridade.Text,
+                    Categoria = cmbCategoria.Text,
+                    Status = "Aberto",
+                    DataAbertura = DateTime.Now,
+                    UsuarioId = SessaoUsuario.UsuarioLogado.Id
+                };
+
+                _chamadoService.CriarChamado(chamado);
+
+                MessageBox.Show("Chamado aberto com sucesso!");
+                txbTitulo.Clear();
+                txbDescricao.Clear();
+                cmbPrioridade.SelectedIndex = -1;
+                cmbCategoria.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }
