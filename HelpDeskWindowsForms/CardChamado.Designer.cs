@@ -35,6 +35,7 @@
             lblInfo = new Label();
             lblStatus = new Label();
             lblPrioridade = new Label();
+            btnVerDetalhes = new Button();
             SuspendLayout();
             // 
             // contextMenuStrip1
@@ -48,9 +49,9 @@
             lbTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbTitulo.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbTitulo.ForeColor = Color.White;
-            lbTitulo.Location = new Point(15, 15);
+            lbTitulo.Location = new Point(13, 11);
             lbTitulo.Name = "lbTitulo";
-            lbTitulo.Size = new Size(960, 31);
+            lbTitulo.Size = new Size(840, 23);
             lbTitulo.TabIndex = 1;
             lbTitulo.Text = "Problema no sistema de login";
             // 
@@ -60,21 +61,21 @@
             lblDescricao.BackColor = Color.Transparent;
             lblDescricao.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDescricao.ForeColor = Color.White;
-            lblDescricao.Location = new Point(15, 50);
+            lblDescricao.Location = new Point(13, 38);
             lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(960, 50);
+            lblDescricao.Size = new Size(840, 38);
             lblDescricao.TabIndex = 2;
             lblDescricao.Text = "Usuários estão relatando dificuldade para acessar o sistema...";
             // 
             // lblInfo
             // 
-            lblInfo.Anchor = AnchorStyles.Left | AnchorStyles.Bottom;
+            lblInfo.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblInfo.BackColor = Color.Transparent;
             lblInfo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblInfo.ForeColor = Color.White;
-            lblInfo.Location = new Point(15, 110);
+            lblInfo.Location = new Point(13, 82);
             lblInfo.Name = "lblInfo";
-            lblInfo.Size = new Size(500, 23);
+            lblInfo.Size = new Size(438, 17);
             lblInfo.TabIndex = 3;
             lblInfo.Text = "Maria     01/04/2026     Sistema";
             // 
@@ -84,9 +85,9 @@
             lblStatus.BackColor = Color.White;
             lblStatus.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblStatus.ForeColor = Color.Blue;
-            lblStatus.Location = new Point(1150, 20);
+            lblStatus.Location = new Point(998, 15);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(90, 30);
+            lblStatus.Size = new Size(79, 22);
             lblStatus.TabIndex = 4;
             lblStatus.Text = "Aberto";
             lblStatus.TextAlign = ContentAlignment.MiddleCenter;
@@ -97,26 +98,46 @@
             lblPrioridade.BackColor = Color.White;
             lblPrioridade.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPrioridade.ForeColor = Color.Red;
-            lblPrioridade.Location = new Point(1150, 59);
+            lblPrioridade.Location = new Point(998, 44);
             lblPrioridade.Name = "lblPrioridade";
-            lblPrioridade.Size = new Size(90, 30);
+            lblPrioridade.Size = new Size(79, 22);
             lblPrioridade.TabIndex = 5;
             lblPrioridade.Text = "Alta";
             lblPrioridade.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // btnVerDetalhes
+            // 
+            btnVerDetalhes.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnVerDetalhes.BackColor = Color.FromArgb(17, 27, 58);
+            btnVerDetalhes.Cursor = Cursors.Hand;
+            btnVerDetalhes.FlatAppearance.BorderColor = Color.FromArgb(220, 225, 235);
+            btnVerDetalhes.FlatAppearance.MouseDownBackColor = Color.FromArgb(28, 40, 76);
+            btnVerDetalhes.FlatAppearance.MouseOverBackColor = Color.FromArgb(23, 36, 70);
+            btnVerDetalhes.FlatStyle = FlatStyle.Flat;
+            btnVerDetalhes.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnVerDetalhes.ForeColor = Color.White;
+            btnVerDetalhes.Location = new Point(986, 77);
+            btnVerDetalhes.Name = "btnVerDetalhes";
+            btnVerDetalhes.Size = new Size(91, 26);
+            btnVerDetalhes.TabIndex = 6;
+            btnVerDetalhes.Text = "Detalhes";
+            btnVerDetalhes.UseVisualStyleBackColor = false;
+            btnVerDetalhes.Click += btnVerDetalhes_Click;
+            // 
             // CardChamado
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(17, 27, 58);
+            Controls.Add(btnVerDetalhes);
             Controls.Add(lblPrioridade);
             Controls.Add(lblStatus);
             Controls.Add(lblInfo);
             Controls.Add(lblDescricao);
             Controls.Add(lbTitulo);
-            Margin = new Padding(0, 0, 0, 10);
+            Margin = new Padding(0, 0, 0, 8);
             Name = "CardChamado";
-            Size = new Size(1280, 155);
+            Size = new Size(1120, 116);
             Resize += CardChamado_Resize;
             ResumeLayout(false);
         }
@@ -129,5 +150,6 @@
         private Label lblInfo;
         private Label lblStatus;
         private Label lblPrioridade;
+        private Button btnVerDetalhes;
     }
 }

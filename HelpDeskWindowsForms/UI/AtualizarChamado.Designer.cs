@@ -72,14 +72,14 @@
             panel16 = new Panel();
             label31 = new Label();
             panel15 = new Panel();
-            label30 = new Label();
+            btnAtualizarChamado = new Button();
             label6 = new Label();
             panel9 = new Panel();
-            label32 = new Label();
+            txtComentarioAtualizacao = new RichTextBox();
             panel5 = new Panel();
-            label1 = new Label();
+            cmbPrioridadeChamado = new ComboBox();
             panel6 = new Panel();
-            label2 = new Label();
+            cmbStatusChamado = new ComboBox();
             panel7 = new Panel();
             label3 = new Label();
             panel8 = new Panel();
@@ -129,7 +129,7 @@
             label9.Name = "label9";
             label9.Size = new Size(372, 38);
             label9.TabIndex = 4;
-            label9.Text = "HelpDeskd Pro System";
+            label9.Text = "HelpDesk Pro System";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
@@ -205,7 +205,7 @@
             label24.Name = "label24";
             label24.Size = new Size(199, 34);
             label24.TabIndex = 24;
-            label24.Text = "01/04/2026 ás 16:30";
+            label24.Text = "01/04/2026 às 16:30";
             // 
             // label23
             // 
@@ -265,7 +265,7 @@
             label18.Name = "label18";
             label18.Size = new Size(202, 26);
             label18.TabIndex = 18;
-            label18.Text = "01/04/2026 ás 15:00";
+            label18.Text = "01/04/2026 às 15:00";
             // 
             // label17
             // 
@@ -363,7 +363,7 @@
             label13.Name = "label13";
             label13.Size = new Size(44, 15);
             label13.TabIndex = 8;
-            label13.Text = "label13";
+            label13.Visible = false;
             // 
             // label12
             // 
@@ -394,7 +394,7 @@
             label10.Name = "label10";
             label10.Size = new Size(129, 29);
             label10.TabIndex = 5;
-            label10.Text = "Titulo";
+            label10.Text = "Título";
             // 
             // panel13
             // 
@@ -577,23 +577,28 @@
             // panel15
             // 
             panel15.BackColor = Color.FromArgb(37, 31, 52);
-            panel15.Controls.Add(label30);
+            panel15.Controls.Add(btnAtualizarChamado);
             panel15.Location = new Point(77, 485);
             panel15.Name = "panel15";
             panel15.Size = new Size(242, 38);
             panel15.TabIndex = 7;
             panel15.Paint += panel15_Paint;
             // 
-            // label30
+            // btnAtualizarChamado
             // 
-            label30.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label30.ForeColor = Color.White;
-            label30.Location = new Point(0, 0);
-            label30.Name = "label30";
-            label30.Size = new Size(242, 38);
-            label30.TabIndex = 7;
-            label30.Text = "Atualizar";
-            label30.TextAlign = ContentAlignment.MiddleCenter;
+            btnAtualizarChamado.BackColor = Color.FromArgb(37, 31, 52);
+            btnAtualizarChamado.Cursor = Cursors.Hand;
+            btnAtualizarChamado.FlatAppearance.BorderSize = 0;
+            btnAtualizarChamado.FlatStyle = FlatStyle.Flat;
+            btnAtualizarChamado.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAtualizarChamado.ForeColor = Color.White;
+            btnAtualizarChamado.Location = new Point(0, 0);
+            btnAtualizarChamado.Name = "btnAtualizarChamado";
+            btnAtualizarChamado.Size = new Size(242, 38);
+            btnAtualizarChamado.TabIndex = 7;
+            btnAtualizarChamado.Text = "Atualizar";
+            btnAtualizarChamado.UseVisualStyleBackColor = false;
+            btnAtualizarChamado.Click += btnAtualizarChamado_Click;
             // 
             // label6
             // 
@@ -609,68 +614,72 @@
             // panel9
             // 
             panel9.BackColor = Color.FromArgb(183, 187, 202);
-            panel9.Controls.Add(label32);
+            panel9.Controls.Add(txtComentarioAtualizacao);
             panel9.Location = new Point(16, 260);
             panel9.Name = "panel9";
             panel9.Size = new Size(358, 212);
             panel9.TabIndex = 5;
             panel9.Paint += panel9_Paint;
             // 
-            // label32
+            // txtComentarioAtualizacao
             // 
-            label32.BackColor = Color.Transparent;
-            label32.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label32.ForeColor = Color.White;
-            label32.Location = new Point(0, 0);
-            label32.Name = "label32";
-            label32.Size = new Size(365, 38);
-            label32.TabIndex = 7;
-            label32.Text = "Digite uma atualização ou solução:\r\n";
-            label32.Click += label32_Click;
+            txtComentarioAtualizacao.BackColor = Color.FromArgb(183, 187, 202);
+            txtComentarioAtualizacao.BorderStyle = BorderStyle.None;
+            txtComentarioAtualizacao.Font = new Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtComentarioAtualizacao.ForeColor = Color.FromArgb(18, 25, 47);
+            txtComentarioAtualizacao.Location = new Point(16, 16);
+            txtComentarioAtualizacao.Name = "txtComentarioAtualizacao";
+            txtComentarioAtualizacao.Size = new Size(326, 180);
+            txtComentarioAtualizacao.TabIndex = 7;
+            txtComentarioAtualizacao.Text = "";
             // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(25, 31, 52);
-            panel5.Controls.Add(label1);
+            panel5.Controls.Add(cmbPrioridadeChamado);
             panel5.Location = new Point(192, 149);
             panel5.Name = "panel5";
             panel5.Size = new Size(179, 38);
             panel5.TabIndex = 4;
             panel5.Paint += panel5_Paint;
             // 
-            // label1
+            // cmbPrioridadeChamado
             // 
-            label1.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(179, 38);
-            label1.TabIndex = 0;
-            label1.Text = "Alta";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
+            cmbPrioridadeChamado.BackColor = Color.FromArgb(25, 31, 52);
+            cmbPrioridadeChamado.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPrioridadeChamado.FlatStyle = FlatStyle.Flat;
+            cmbPrioridadeChamado.Font = new Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbPrioridadeChamado.ForeColor = Color.White;
+            cmbPrioridadeChamado.FormattingEnabled = true;
+            cmbPrioridadeChamado.Items.AddRange(new object[] { "Baixa", "Média", "Alta", "Urgente" });
+            cmbPrioridadeChamado.Location = new Point(8, 5);
+            cmbPrioridadeChamado.Name = "cmbPrioridadeChamado";
+            cmbPrioridadeChamado.Size = new Size(163, 31);
+            cmbPrioridadeChamado.TabIndex = 0;
             // 
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(25, 31, 52);
-            panel6.Controls.Add(label2);
+            panel6.Controls.Add(cmbStatusChamado);
             panel6.Location = new Point(195, 83);
             panel6.Name = "panel6";
             panel6.Size = new Size(179, 38);
             panel6.TabIndex = 3;
             panel6.Paint += panel6_Paint;
             // 
-            // label2
+            // cmbStatusChamado
             // 
-            label2.Font = new Font("Poppins", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(0, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(176, 38);
-            label2.TabIndex = 0;
-            label2.Text = "Aberto";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.Click += label2_Click;
+            cmbStatusChamado.BackColor = Color.FromArgb(25, 31, 52);
+            cmbStatusChamado.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbStatusChamado.FlatStyle = FlatStyle.Flat;
+            cmbStatusChamado.Font = new Font("Poppins", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbStatusChamado.ForeColor = Color.White;
+            cmbStatusChamado.FormattingEnabled = true;
+            cmbStatusChamado.Items.AddRange(new object[] { "Aberto", "Em atendimento", "Fechado" });
+            cmbStatusChamado.Location = new Point(8, 5);
+            cmbStatusChamado.Name = "cmbStatusChamado";
+            cmbStatusChamado.Size = new Size(163, 31);
+            cmbStatusChamado.TabIndex = 0;
             // 
             // panel7
             // 
@@ -809,9 +818,9 @@
         private Panel panel3;
         private Panel panel4;
         private Panel panel5;
-        private Label label1;
+        private ComboBox cmbPrioridadeChamado;
         private Panel panel6;
-        private Label label2;
+        private ComboBox cmbStatusChamado;
         private Panel panel7;
         private Label label3;
         private Panel panel8;
@@ -819,11 +828,11 @@
         private Label label5;
         private Panel panel9;
         private Label label6;
-        private Label label30;
+        private Button btnAtualizarChamado;
         private Panel panel15;
         private Panel panel14;
         private Panel panel16;
         private Label label31;
-        private Label label32;
+        private RichTextBox txtComentarioAtualizacao;
     }
 }

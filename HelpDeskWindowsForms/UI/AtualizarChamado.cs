@@ -18,7 +18,8 @@ namespace HelpDeskWindowsForms.UI
 
         private void AtualizarChamado_Load(object sender, EventArgs e)
         {
-
+            cmbStatusChamado.SelectedIndex = 0;
+            cmbPrioridadeChamado.SelectedIndex = 2;
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
@@ -331,6 +332,11 @@ namespace HelpDeskWindowsForms.UI
 
             // Aplica a região arredondada ao panel14
             panel14.Region = new Region(path);
+        }
+
+        private void btnAtualizarChamado_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

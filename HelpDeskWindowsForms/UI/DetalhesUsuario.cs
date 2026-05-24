@@ -5,14 +5,14 @@ using System.Windows.Forms;
 
 namespace HelpDeskWindowsForms.UI
 {
-    public partial class DatalhesdoUsuario : Form
+    public partial class DetalhesUsuario : Form
     {
-        public DatalhesdoUsuario()
+        public DetalhesUsuario()
         {
             InitializeComponent();
         }
 
-        private void DatalhesdoUsuario_Load(object sender, EventArgs e)
+        private void DetalhesUsuario_Load(object sender, EventArgs e)
         {
         }
 
@@ -79,16 +79,19 @@ namespace HelpDeskWindowsForms.UI
 
         private void panel15_Paint(object sender, PaintEventArgs e)
         {
+            if (sender is not Panel panel)
+                return;
+
             GraphicsPath path = new GraphicsPath();
             int radius = 20; // Você pode ajustar o raio conforme necessário
 
             path.AddArc(0, 0, radius, radius, 180, 90);
-            path.AddArc(panel15.Width - radius - 1, 0, radius, radius, 270, 90);
-            path.AddArc(panel15.Width - radius - 1, panel15.Height - radius - 1, radius, radius, 0, 90);
-            path.AddArc(0, panel15.Height - radius - 1, radius, radius, 90, 90);
+            path.AddArc(panel.Width - radius - 1, 0, radius, radius, 270, 90);
+            path.AddArc(panel.Width - radius - 1, panel.Height - radius - 1, radius, radius, 0, 90);
+            path.AddArc(0, panel.Height - radius - 1, radius, radius, 90, 90);
             path.CloseAllFigures();
 
-            panel15.Region = new Region(path);
+            panel.Region = new Region(path);
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -203,6 +206,13 @@ namespace HelpDeskWindowsForms.UI
             path.CloseAllFigures();
 
             panel16.Region = new Region(path);
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            var sair = new DashboardCliente();
+            sair.Show();
+            this.Hide();
         }
     }
 }

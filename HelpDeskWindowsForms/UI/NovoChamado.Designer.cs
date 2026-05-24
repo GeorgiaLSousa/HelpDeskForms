@@ -246,7 +246,7 @@
             lbTitulo.Name = "lbTitulo";
             lbTitulo.Size = new Size(40, 17);
             lbTitulo.TabIndex = 4;
-            lbTitulo.Text = "Titulo";
+            lbTitulo.Text = "Título";
             // 
             // lbAbraChamado
             // 

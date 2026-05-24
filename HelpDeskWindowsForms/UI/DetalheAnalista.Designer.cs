@@ -67,10 +67,7 @@
             label25 = new Label();
             pictureBox3 = new PictureBox();
             panel3 = new Panel();
-            label1 = new Label();
             panel4 = new Panel();
-            panel9 = new Panel();
-            label6 = new Label();
             panel8 = new Panel();
             label5 = new Label();
             panel7 = new Panel();
@@ -79,6 +76,8 @@
             label3 = new Label();
             panel5 = new Panel();
             label2 = new Label();
+            label1 = new Label();
+            btnAssumir = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -94,7 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
-            panel9.SuspendLayout();
             panel8.SuspendLayout();
             panel7.SuspendLayout();
             panel6.SuspendLayout();
@@ -120,7 +118,7 @@
             label9.Name = "label9";
             label9.Size = new Size(372, 38);
             label9.TabIndex = 4;
-            label9.Text = "HelpDeskd Pro System";
+            label9.Text = "HelpDesk Pro System";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             label9.Click += label9_Click;
             // 
@@ -188,7 +186,7 @@
             label24.Name = "label24";
             label24.Size = new Size(174, 24);
             label24.TabIndex = 24;
-            label24.Text = "01/04/2026 ás 16:30";
+            label24.Text = "01/04/2026 às 16:30";
             // 
             // label23
             // 
@@ -235,7 +233,7 @@
             // 
             label19.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label19.ForeColor = Color.FromArgb(152, 145, 145);
-            label19.Location = new Point(66, 390);
+            label19.Location = new Point(66, 388);
             label19.Name = "label19";
             label19.Size = new Size(167, 29);
             label19.TabIndex = 19;
@@ -249,7 +247,7 @@
             label18.Name = "label18";
             label18.Size = new Size(202, 26);
             label18.TabIndex = 18;
-            label18.Text = "01/04/2026 ás 15:00";
+            label18.Text = "01/04/2026 às 15:00";
             // 
             // label17
             // 
@@ -348,9 +346,9 @@
             label13.AutoSize = true;
             label13.Location = new Point(0, 0);
             label13.Name = "label13";
-            label13.Size = new Size(44, 15);
+            label13.Size = new Size(0, 15);
             label13.TabIndex = 8;
-            label13.Text = "label13";
+            label13.Visible = false;
             // 
             // label12
             // 
@@ -383,7 +381,7 @@
             label10.Name = "label10";
             label10.Size = new Size(129, 29);
             label10.TabIndex = 5;
-            label10.Text = "Titulo";
+            label10.Text = "Título";
             // 
             // panel13
             // 
@@ -407,7 +405,7 @@
             // 
             label8.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(164, 0, 0);
-            label8.Location = new Point(0, 0);
+            label8.Location = new Point(-35, 2);
             label8.Name = "label8";
             label8.Size = new Size(68, 28);
             label8.TabIndex = 0;
@@ -525,21 +523,8 @@
             panel3.TabIndex = 3;
             panel3.Paint += panel3_Paint;
             // 
-            // label1
-            // 
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(-3, 31);
-            label1.Name = "label1";
-            label1.Size = new Size(399, 31);
-            label1.TabIndex = 0;
-            label1.Text = "Indormações sobre o chamado";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // panel4
             // 
-            panel4.Controls.Add(panel9);
             panel4.Controls.Add(panel8);
             panel4.Controls.Add(panel7);
             panel4.Controls.Add(panel6);
@@ -550,27 +535,6 @@
             panel4.Size = new Size(393, 335);
             panel4.TabIndex = 4;
             panel4.Paint += panel4_Paint;
-            // 
-            // panel9
-            // 
-            panel9.BackColor = Color.FromArgb(37, 31, 52);
-            panel9.Controls.Add(label6);
-            panel9.Location = new Point(84, 272);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(242, 38);
-            panel9.TabIndex = 5;
-            panel9.Paint += panel5_Paint;
-            // 
-            // label6
-            // 
-            label6.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(-3, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(242, 38);
-            label6.TabIndex = 5;
-            label6.Text = "Assumir chamado";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel8
             // 
@@ -655,11 +619,39 @@
             label2.Text = "Status:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // label1
+            // 
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.WhiteSmoke;
+            label1.Location = new Point(-3, 31);
+            label1.Name = "label1";
+            label1.Size = new Size(399, 31);
+            label1.TabIndex = 0;
+            label1.Text = "Informações sobre o chamado";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnAssumir
+            // 
+            btnAssumir.BackColor = Color.FromArgb(37, 31, 52);
+            btnAssumir.Cursor = Cursors.Hand;
+            btnAssumir.FlatAppearance.BorderSize = 0;
+            btnAssumir.FlatStyle = FlatStyle.Flat;
+            btnAssumir.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAssumir.ForeColor = Color.White;
+            btnAssumir.Location = new Point(1008, 522);
+            btnAssumir.Name = "btnAssumir";
+            btnAssumir.Size = new Size(242, 38);
+            btnAssumir.TabIndex = 8;
+            btnAssumir.Text = "Assumir Chamado";
+            btnAssumir.UseVisualStyleBackColor = false;
+            // 
             // DetalheAnalista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1366, 768);
+            Controls.Add(btnAssumir);
             Controls.Add(panel3);
             Controls.Add(pictureBox3);
             Controls.Add(panel2);
@@ -685,7 +677,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
-            panel9.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel6.ResumeLayout(false);
@@ -710,7 +701,6 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private Panel panel9;
         private Label label5;
         private Panel panel10;
         private Panel panel12;
@@ -744,6 +734,6 @@
         private Label label27;
         private Label label26;
         private Label label25;
-        private Label label6;
+        private Button btnAssumir;
     }
 }
