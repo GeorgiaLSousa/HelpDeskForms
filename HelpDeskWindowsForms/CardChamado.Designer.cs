@@ -78,6 +78,7 @@
             lblInfo.Size = new Size(438, 17);
             lblInfo.TabIndex = 3;
             lblInfo.Text = "Maria     01/04/2026     Sistema";
+            lblInfo.Click += lblInfo_Click;
             // 
             // lblStatus
             // 

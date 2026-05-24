@@ -2,7 +2,6 @@
 using HelpDeskWindowsForms.Repositories;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace HelpDeskWindowsForms.Service
 {
@@ -33,6 +32,16 @@ namespace HelpDeskWindowsForms.Service
             chamado.DataAbertura = DateTime.Now;
 
             _chamadoRepository.SalvarChamado(chamado);
+        }
+
+        public List<Chamado> ObterChamadosPorUsuario(int usuarioId)
+        {
+            return _chamadoRepository.ObterChamadosPorUsuario(usuarioId);
+        }
+
+        public List<Chamado> ObterTodosChamados()
+        {
+            return _chamadoRepository.ObterTodosChamados();
         }
     }
 }
