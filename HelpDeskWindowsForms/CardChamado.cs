@@ -29,11 +29,17 @@ namespace HelpDeskWindowsForms
 
             lblStatus.Left = Width - larguraBadge - margem;
             lblPrioridade.Left = lblStatus.Left;
+            btnVerDetalhes.Left = lblStatus.Left;
 
             var larguraTexto = Math.Max(220, lblStatus.Left - espacoBadge - margem);
             lbTitulo.Width = larguraTexto;
             lblDescricao.Width = larguraTexto;
             lblInfo.Width = larguraTexto;
+        }
+
+        private void btnVerDetalhes_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

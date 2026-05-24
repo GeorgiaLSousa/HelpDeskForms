@@ -175,25 +175,25 @@
             cardChamado1.Location = new Point(0, 0);
             cardChamado1.Margin = new Padding(0, 0, 0, 8);
             cardChamado1.Name = "cardChamado1";
-            cardChamado1.Size = new Size(1102, 109);
+            cardChamado1.Size = new Size(1120, 116);
             cardChamado1.TabIndex = 0;
             // 
             // cardChamado2
             // 
             cardChamado2.BackColor = Color.FromArgb(17, 27, 58);
-            cardChamado2.Location = new Point(0, 117);
+            cardChamado2.Location = new Point(0, 124);
             cardChamado2.Margin = new Padding(0, 0, 0, 8);
             cardChamado2.Name = "cardChamado2";
-            cardChamado2.Size = new Size(1102, 109);
+            cardChamado2.Size = new Size(1120, 116);
             cardChamado2.TabIndex = 1;
             // 
             // cardChamado3
             // 
             cardChamado3.BackColor = Color.FromArgb(17, 27, 58);
-            cardChamado3.Location = new Point(0, 234);
+            cardChamado3.Location = new Point(0, 248);
             cardChamado3.Margin = new Padding(0, 0, 0, 8);
             cardChamado3.Name = "cardChamado3";
-            cardChamado3.Size = new Size(1102, 116);
+            cardChamado3.Size = new Size(1120, 116);
             cardChamado3.TabIndex = 2;
             // 
             // DashboardCliente
