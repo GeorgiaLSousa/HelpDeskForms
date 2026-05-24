@@ -1,11 +1,12 @@
-﻿using System;
+﻿using HelpDeskWindowsForms.Service;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using HelpDeskWindowsForms.Service;
 
 namespace HelpDeskWindowsForms.UI
 {
@@ -29,6 +30,8 @@ namespace HelpDeskWindowsForms.UI
             cmbAtendimento.SelectedIndex = 0;
             AjustarCards();
             CarregarChamados();
+            var usuario = SessaoUsuario.UsuarioLogado;
+            lblUsuario.Text = usuario?.Nome ?? "Usuário";
         }
 
         private void DashboardAnalista_Resize(object sender, EventArgs e)
