@@ -34,5 +34,15 @@ namespace HelpDeskWindowsForms.Service
 
             _chamadoRepository.SalvarChamado(chamado);
         }
+
+        public List<Chamado> ObterChamadosPorUsuario(int usuarioId)
+        {
+            return _chamadoRepository.ObterChamadosPorUsuario(usuarioId);
+        }
+
+        public List<Chamado> ObterTodosChamados()
+        {
+            return _chamadoRepository.ObterTodosChamados();
+        }
     }
 }

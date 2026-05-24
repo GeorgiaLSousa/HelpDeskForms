@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using HelpDeskWindowsForms.Model;
 
 namespace HelpDeskWindowsForms
 {
@@ -37,7 +38,26 @@ namespace HelpDeskWindowsForms
             lblInfo.Width = larguraTexto;
         }
 
+        public void CarregarDados(Chamado chamado)
+        {
+            lbTitulo.Text = chamado.Titulo;
+            lblDescricao.Text = chamado.Descricao;
+            lblStatus.Text = chamado.Status;
+            lblPrioridade.Text = chamado.Prioridade;
+            lblInfo.Text = $"{chamado.Usuario?.Nome ?? "Usuario"}     {chamado.DataAbertura:dd/MM/yyyy}     {chamado.Categoria}";
+
+
+        }
+
+
+
+
         private void btnVerDetalhes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblInfo_Click(object sender, EventArgs e)
         {
 
         }

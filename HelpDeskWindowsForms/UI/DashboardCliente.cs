@@ -1,26 +1,29 @@
-﻿using System;
+﻿using HelpDeskWindowsForms.Service;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace HelpDeskWindowsForms.UI
 {
     public partial class DashboardCliente : Form
     {
         private readonly IServiceProvider _serviceProvider = null!;
+        private readonly ChamadoService _chamadoService = null!;
 
         public DashboardCliente()
         {
             InitializeComponent();
         }
 
-        public DashboardCliente(IServiceProvider serviceProvider) : this()
+        public DashboardCliente(IServiceProvider serviceProvider, ChamadoService chamadoService) : this()
         {
             _serviceProvider = serviceProvider;
+            _chamadoService = chamadoService;
         }
 
         private void btNovoChamado_Click(object sender, EventArgs e)
@@ -40,6 +43,9 @@ namespace HelpDeskWindowsForms.UI
             cmbStatus.SelectedIndex = 0;
             this.ActiveControl = lbTituloPagina;
             AjustarCards();
+            CarregarChamados();
+            var usuario = SessaoUsuario.UsuarioLogado;
+            lbNomeUsuario.Text = usuario?.Nome;
         }
 
         private void lbTituloPagina_Click(object sender, EventArgs e)
@@ -55,9 +61,30 @@ namespace HelpDeskWindowsForms.UI
         private void AjustarCards()
         {
             var largura = Math.Max(600, flowChamados.ClientSize.Width - 24);
-            cardChamado1.Width = largura;
-            cardChamado2.Width = largura;
-            cardChamado3.Width = largura;
+
+            foreach (Control controle in flowChamados.Controls)
+            {
+                controle.Width = largura;
+            }
+        }
+
+        private void CarregarChamados()
+        {
+            if (SessaoUsuario.UsuarioLogado == null)
+                return;
+
+            var chamados = _chamadoService.ObterChamadosPorUsuario(SessaoUsuario.UsuarioLogado.Id);
+
+            flowChamados.Controls.Clear();
+
+            foreach (var chamado in chamados)
+            {
+                var card = new CardChamado();
+                card.Width = Math.Max(600, flowChamados.ClientSize.Width - 24);
+                card.CarregarDados(chamado);
+
+                flowChamados.Controls.Add(card);
+            }
         }
     }
 }
