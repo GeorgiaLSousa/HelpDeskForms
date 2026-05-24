@@ -72,6 +72,7 @@ namespace HelpDeskWindowsForms
             {
 
                 var usuario = _usuarioService.Login(EmailText.Text, SenhaText.Text);
+                SessaoUsuario.UsuarioLogado = usuario;
                 RedirecionarUsuario(usuario);
 
             }

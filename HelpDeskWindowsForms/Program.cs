@@ -5,6 +5,7 @@ using HelpDeskWindowsForms.Service;
 using HelpDeskWindowsForms.Repositories;
 using System.Linq;
 using HelpDeskWindowsForms.UI;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace HelpDeskWindowsForms
 {
@@ -28,6 +29,10 @@ namespace HelpDeskWindowsForms
             // REGISTRO DAS DEPENDÊNCIAS
             services.AddScoped<UsuarioService>();
             services.AddScoped<UsuarioRepository>();
+
+            services.AddScoped<ChamadoService>();
+            services.AddScoped<ChamadoRepository>();
+
 
             // Registrar os formulários para que possam receber injeção de dependência
             services.AddTransient<Login>();
