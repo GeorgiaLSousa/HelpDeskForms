@@ -33,6 +33,7 @@ namespace HelpDeskWindowsForms
             services.AddTransient<Login>();
             services.AddTransient<Cadastro>();
             services.AddTransient<DetalheAnalista>();
+            services.AddTransient<DatalhesdoUsuario>();
 
             ServiceProvider = services.BuildServiceProvider();
 
@@ -53,8 +54,7 @@ namespace HelpDeskWindowsForms
             }
 
             // Iniciar a aplicação resolvendo o formulário inicial da Injeção de Dependências
-            // Iniciar a aplicação resolvendo o formulário 'DetalheAnalista' através da injeção de dependência
-            Application.Run(ServiceProvider.GetRequiredService<DetalheAnalista>());
+            Application.Run(ServiceProvider.GetRequiredService<DatalhesdoUsuario>());
         }
     }
 }
