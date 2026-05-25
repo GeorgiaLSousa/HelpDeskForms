@@ -24,15 +24,17 @@ namespace HelpDeskWindowsForms
 
         private void AjustarLayout()
         {
-            const int margem = 15;
-            const int larguraBadge = 90;
+            const int margem = 20;
             const int espacoBadge = 25;
 
-            lblStatus.Left = Width - larguraBadge - margem;
-            lblPrioridade.Left = lblStatus.Left;
-            btnVerDetalhes.Left = lblStatus.Left;
+            var larguraAreaAcoes = Math.Max(btnVerDetalhes.Width, Math.Max(lblStatus.Width, lblPrioridade.Width));
+            var esquerdaAcoes = Width - larguraAreaAcoes - margem;
 
-            var larguraTexto = Math.Max(220, lblStatus.Left - espacoBadge - margem);
+            lblStatus.Left = esquerdaAcoes + (larguraAreaAcoes - lblStatus.Width) / 2;
+            lblPrioridade.Left = lblStatus.Left;
+            btnVerDetalhes.Left = esquerdaAcoes + (larguraAreaAcoes - btnVerDetalhes.Width) / 2;
+
+            var larguraTexto = Math.Max(220, esquerdaAcoes - espacoBadge - margem);
             lbTitulo.Width = larguraTexto;
             lblDescricao.Width = larguraTexto;
             lblInfo.Width = larguraTexto;

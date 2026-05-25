@@ -74,12 +74,18 @@ namespace HelpDeskWindowsForms.UI
 
         private void AjustarCards()
         {
-            var largura = Math.Max(600, flowChamados.ClientSize.Width - 24);
+            var largura = CalcularLarguraCard();
 
             foreach (Control controle in flowChamados.Controls)
             {
                 controle.Width = largura;
             }
+        }
+
+        private int CalcularLarguraCard()
+        {
+            var descontoScroll = SystemInformation.VerticalScrollBarWidth + 32;
+            return Math.Max(600, flowChamados.ClientSize.Width - descontoScroll);
         }
 
         private void CarregarChamados()
@@ -94,7 +100,7 @@ namespace HelpDeskWindowsForms.UI
             foreach (var chamado in chamados)
             {
                 var card = new CardChamado();
-                card.Width = Math.Max(600, flowChamados.ClientSize.Width - 24);
+                card.Width = CalcularLarguraCard();
                 card.CarregarDados(chamado);
 
                 flowChamados.Controls.Add(card);
