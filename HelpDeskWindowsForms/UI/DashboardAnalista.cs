@@ -28,15 +28,32 @@ namespace HelpDeskWindowsForms.UI
         {
             cmbStatus.SelectedIndex = 0;
             cmbAtendimento.SelectedIndex = 0;
+            AjustarCabecalho();
             AjustarCards();
             CarregarChamados();
             var usuario = SessaoUsuario.UsuarioLogado;
             lblUsuario.Text = usuario?.Nome ?? "Usuário";
+            AjustarCabecalho();
         }
 
         private void DashboardAnalista_Resize(object sender, EventArgs e)
         {
+            AjustarCabecalho();
             AjustarCards();
+        }
+
+        private void AjustarCabecalho()
+        {
+            picLogo.Width = 120;
+
+            lblTituloSistema.Left = 170;
+            lblTituloSistema.Top = (panelHeader.Height - lblTituloSistema.Height) / 2;
+
+            pictureBox1.Left = panelHeader.Width - pictureBox1.Width - 24;
+            pictureBox1.Top = (panelHeader.Height - pictureBox1.Height) / 2;
+
+            lblUsuario.Left = pictureBox1.Left - lblUsuario.Width - 12;
+            lblUsuario.Top = (panelHeader.Height - lblUsuario.Height) / 2;
         }
 
         private void AjustarCards()

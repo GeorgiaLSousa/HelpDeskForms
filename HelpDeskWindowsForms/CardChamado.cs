@@ -52,10 +52,6 @@ namespace HelpDeskWindowsForms
 
 
 
-        private void btnVerDetalhes_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void lblInfo_Click(object sender, EventArgs e)
         {

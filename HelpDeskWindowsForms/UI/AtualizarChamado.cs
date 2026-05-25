@@ -14,12 +14,43 @@ namespace HelpDeskWindowsForms.UI
         public AtualizarChamado()
         {
             InitializeComponent();
+            AjustarLayout();
         }
 
         private void AtualizarChamado_Load(object sender, EventArgs e)
         {
             cmbStatusChamado.SelectedIndex = 0;
             cmbPrioridadeChamado.SelectedIndex = 2;
+            AjustarLayout();
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            AjustarLayout();
+        }
+
+        private void AjustarLayout()
+        {
+            panel1.Width = ClientSize.Width;
+
+            pictureBox1.Left = 24;
+            pictureBox1.Top = (panel1.Height - pictureBox1.Height) / 2;
+
+            label9.Left = 170;
+            label9.Top = (panel1.Height - label9.Height) / 2;
+
+            pictureBox2.Left = panel1.Width - pictureBox2.Width - 24;
+            pictureBox2.Top = (panel1.Height - pictureBox2.Height) / 2;
+
+            pictureBox3.Left = 24;
+            pictureBox3.Top = panel1.Bottom + 12;
+
+            panel2.Left = 32;
+            panel2.Top = panel1.Bottom + 92;
+
+            panel3.Left = Math.Max(panel2.Right + 48, ClientSize.Width - panel3.Width - 32);
+            panel3.Top = panel2.Top;
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)

@@ -123,7 +123,7 @@
             btnVerDetalhes.TabIndex = 6;
             btnVerDetalhes.Text = "Detalhes";
             btnVerDetalhes.UseVisualStyleBackColor = false;
-            btnVerDetalhes.Click += btnVerDetalhes_Click;
+
             // 
             // CardChamado
             // 

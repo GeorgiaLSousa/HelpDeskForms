@@ -42,10 +42,12 @@ namespace HelpDeskWindowsForms.UI
         {
             cmbStatus.SelectedIndex = 0;
             this.ActiveControl = lbTituloPagina;
+            AjustarCabecalho();
             AjustarCards();
             CarregarChamados();
             var usuario = SessaoUsuario.UsuarioLogado;
-            lbNomeUsuario.Text = usuario?.Nome;
+            lbNomeUsuario.Text = usuario?.Nome ?? "Usuário";
+            AjustarCabecalho();
         }
 
         private void lbTituloPagina_Click(object sender, EventArgs e)
@@ -55,7 +57,19 @@ namespace HelpDeskWindowsForms.UI
 
         private void DashboardCliente_Resize(object sender, EventArgs e)
         {
+            AjustarCabecalho();
             AjustarCards();
+        }
+
+        private void AjustarCabecalho()
+        {
+            PB_Logo.Width = 120;
+            lbTituloSistema.Left = 170;
+            lbTituloSistema.Top = (panelHeader.Height - lbTituloSistema.Height) / 2;
+            PB_IconeUsuario.Left = panelHeader.Width - PB_IconeUsuario.Width - 24;
+            PB_IconeUsuario.Top = (panelHeader.Height - PB_IconeUsuario.Height) / 2;
+            lbNomeUsuario.Left = PB_IconeUsuario.Left - lbNomeUsuario.Width - 12;
+            lbNomeUsuario.Top = (panelHeader.Height - lbNomeUsuario.Height) / 2;
         }
 
         private void AjustarCards()
@@ -85,6 +99,11 @@ namespace HelpDeskWindowsForms.UI
 
                 flowChamados.Controls.Add(card);
             }
+        }
+
+        private void cardChamado1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

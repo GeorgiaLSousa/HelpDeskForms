@@ -177,6 +177,7 @@
             cardChamado1.Name = "cardChamado1";
             cardChamado1.Size = new Size(1120, 116);
             cardChamado1.TabIndex = 0;
+            cardChamado1.Load += cardChamado1_Load;
             // 
             // cardChamado2
             // 
