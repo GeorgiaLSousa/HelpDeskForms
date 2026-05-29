@@ -73,7 +73,7 @@ namespace HelpDeskWindowsForms.UI
             if (SessaoUsuario.UsuarioLogado == null)
                 return;
 
-            var chamados = _chamadoService.ObterChamadosPorUsuario(SessaoUsuario.UsuarioLogado.Id);
+            var chamados = _chamadoService.ObterChamadosPorUsuario();
 
             flowChamados.Controls.Clear();
 

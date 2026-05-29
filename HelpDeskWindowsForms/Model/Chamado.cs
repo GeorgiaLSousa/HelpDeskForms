@@ -7,24 +7,36 @@ namespace HelpDeskWindowsForms.Model
 {
     public class Chamado
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         public required string Titulo { get; set; }
 
         public required string Descricao { get; set; }
 
-        public required string Prioridade { get; set; }
+        public StatusChamado Status { get; set; }
 
-        public required string Categoria { get; set; }
+        public Prioridade Prioridade { get; set; }
 
-        public required string Status { get; set; }
+        public Usuario? Solicitante { get; set; }
 
-       public required DateTime DataAbertura { get; set; }
+        public Usuario? Analista { get; set; }
 
-       public int UsuarioId { get; set; }
-       
-        public Usuario? Usuario { get; set; }
+        public required Setor Categoria { get; set; }
 
+        public DateTime DataAbertura { get; set; }
+
+        public DateTime DataAtualizacao { get; set; }
+
+        public DateTime DataFechamento { get; set; }
+
+    }
+
+
+    public enum StatusChamado
+    {
+        Aberto,
+        EmAndamento,
+        Fechado
     }
 
     public enum Prioridade
@@ -34,12 +46,14 @@ namespace HelpDeskWindowsForms.Model
         Alta
     }
 
-    public enum Categoria
+    public enum Setor
     {
-        Software,
-        Hardware,
-        Rede,
-        Outro
+        Suporte,
+        Desenvolvimento,
+        Infraestrutura,
+        Redes,
+        Bug
     }
+
 
 }

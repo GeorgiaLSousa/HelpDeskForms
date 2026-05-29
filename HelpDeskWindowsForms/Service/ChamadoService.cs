@@ -7,41 +7,106 @@ namespace HelpDeskWindowsForms.Service
 {
     public class ChamadoService
     {
-        private readonly ChamadoRepository _chamadoRepository;
+        private readonly ChamadoRepositories chamadoRepositories;
 
-        public ChamadoService(ChamadoRepository chamadoRepository)
+        public ChamadoService(ChamadoRepositories chamadoRepositories)
         {
-            _chamadoRepository = chamadoRepository;
+            this.chamadoRepositories = chamadoRepositories;
         }
 
         public void CriarChamado(Chamado chamado)
         {
-            if (string.IsNullOrWhiteSpace(chamado.Titulo))
-                throw new Exception("Informe o título.");
+            if (SessaoUsuario.UsuarioLogado == null)
+            {
+                throw new Exception("Usuário não está logado.");
+            }
 
-            if (string.IsNullOrWhiteSpace(chamado.Descricao))
-                throw new Exception("Informe a descrição.");
+            chamado.Solicitante = SessaoUsuario.UsuarioLogado;
+            chamado.Status = StatusChamado.Aberto;
 
-            if (string.IsNullOrWhiteSpace(chamado.Prioridade))
-                throw new Exception("Informe a prioridade.");
-
-            if (string.IsNullOrWhiteSpace(chamado.Categoria))
-                throw new Exception("Informe a categoria.");
-
-            chamado.Status = "Aberto";
-            chamado.DataAbertura = DateTime.Now;
-
-            _chamadoRepository.SalvarChamado(chamado);
+            chamadoRepositories.SalvarChamado(chamado);
         }
 
-        public List<Chamado> ObterChamadosPorUsuario(int usuarioId)
+        public List<Chamado> ListarChamadosAbertos()
         {
-            return _chamadoRepository.ObterChamadosPorUsuario(usuarioId);
+            return chamadoRepositories.chamadoAberto();
         }
+
+        public List<Chamado> ListarChamadosAnalista()
+        {
+            if (SessaoUsuario.UsuarioLogado == null)
+            {
+                throw new Exception("Usuário não está logado.");
+            }
+
+            return chamadoRepositories.chamadoAnalista(SessaoUsuario.UsuarioLogado);
+        }
+
+        public List<Chamado> ListaChamadoUsuario()
+        {
+            if (SessaoUsuario.UsuarioLogado == null)
+            {
+                throw new Exception("Usuário não está logado.");
+            }
+
+            return chamadoRepositories.chamadoUsuario(SessaoUsuario.UsuarioLogado);
+        }
+
+        public List<Chamado> TodosChamados()
+        {
+            if (SessaoUsuario.UsuarioLogado == null)
+            {
+                throw new Exception("Usuário não está logado.");
+            }
+
+            return chamadoRepositories.todosChamados(SessaoUsuario.UsuarioLogado);
+        }
+
+        public void AtualizarChamado(Chamado chamado)
+        {
+            if (SessaoUsuario.UsuarioLogado == null)
+            {
+                throw new Exception("Usuário não está logado.");
+            }
+
+            chamadoRepositories.AtualizarChamado(chamado, SessaoUsuario.UsuarioLogado);
+        }
+
+        public Chamado DetalhesChamado(long id)
+        {
+            if (id <= 0)
+            {
+                throw new Exception("ID de chamado inválido.");
+            }
+
+            return chamadoRepositories.DetalhesChamado(id);
+        }
+
+        public Chamado AtenderChamado(long id)
+        {
+            if (SessaoUsuario.UsuarioLogado == null)
+            {
+                throw new Exception("Usuário não está logado.");
+            }
+
+            if (id <= 0)
+            {
+                throw new Exception("ID de chamado inválido.");
+            }
+
+            return chamadoRepositories.atenderChamado(id, SessaoUsuario.UsuarioLogado);
+        }
+
+        // MÉTODOS ADICIONADOS PARA SUA UI
 
         public List<Chamado> ObterTodosChamados()
         {
-            return _chamadoRepository.ObterTodosChamados();
+            return TodosChamados();
+        }
+
+        public List<Chamado> ObterChamadosPorUsuario()
+        {
+            return ListaChamadoUsuario();
         }
     }
 }

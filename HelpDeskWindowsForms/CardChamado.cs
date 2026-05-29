@@ -42,9 +42,9 @@ namespace HelpDeskWindowsForms
         {
             lbTitulo.Text = chamado.Titulo;
             lblDescricao.Text = chamado.Descricao;
-            lblStatus.Text = chamado.Status;
-            lblPrioridade.Text = chamado.Prioridade;
-            lblInfo.Text = $"{chamado.Usuario?.Nome ?? "Usuario"}     {chamado.DataAbertura:dd/MM/yyyy}     {chamado.Categoria}";
+            lblStatus.Text = chamado.Status.ToString();
+            lblPrioridade.Text = chamado.Prioridade.ToString();
+            lblInfo.Text = $"{chamado.Solicitante?.Nome ?? "Usuario"}     {chamado.DataAbertura:dd/MM/yyyy}     {chamado.Categoria}";
 
 
         }

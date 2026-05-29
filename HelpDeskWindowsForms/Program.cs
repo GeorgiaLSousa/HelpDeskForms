@@ -31,7 +31,7 @@ namespace HelpDeskWindowsForms
             services.AddScoped<UsuarioRepository>();
 
             services.AddScoped<ChamadoService>();
-            services.AddScoped<ChamadoRepository>();
+            services.AddScoped<ChamadoRepositories>();
 
 
             // Registrar os formulários para que possam receber injeção de dependência

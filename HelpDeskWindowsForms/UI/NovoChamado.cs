@@ -69,11 +69,16 @@ namespace HelpDeskWindowsForms.UI
                 {
                     Titulo = txbTitulo.Text.Trim(),
                     Descricao = txbDescricao.Text.Trim(),
-                    Prioridade = cmbPrioridade.Text,
-                    Categoria = cmbCategoria.Text,
-                    Status = "Aberto",
+
+                    Prioridade = Enum.Parse<Prioridade>(cmbPrioridade.Text),
+
+                    Categoria = Enum.Parse<Setor>(cmbCategoria.Text),
+
+                    Status = StatusChamado.Aberto,
+
                     DataAbertura = DateTime.Now,
-                    UsuarioId = SessaoUsuario.UsuarioLogado.Id
+
+                    Solicitante = SessaoUsuario.UsuarioLogado
                 };
 
                 _chamadoService.CriarChamado(chamado);

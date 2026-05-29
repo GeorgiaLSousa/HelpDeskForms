@@ -9,11 +9,11 @@ namespace HelpDeskWindowsForms.Service
     public class UsuarioService
     {
 
-        public readonly UsuarioRepository usuarioRepository;
+        public readonly UsuarioRepository _usuarioRepository;
 
         public UsuarioService(UsuarioRepository usuarioRepository)
         {
-            this.usuarioRepository = usuarioRepository;
+            this._usuarioRepository = usuarioRepository;
         }
 
         public void CriarUsuario(Usuario usuario)
@@ -33,12 +33,12 @@ namespace HelpDeskWindowsForms.Service
                 throw new Exception("A senha deve ter no mínimo 8 caracteres.");
             }
 
-            usuarioRepository.SalvarUsuario(usuario);
+            _usuarioRepository.SalvarUsuario(usuario);
         }
 
         public Usuario Login(string email, string senha)
         {
-            return usuarioRepository.Login(email, senha);
+            return _usuarioRepository.Login(email, senha);
         }
 
         private bool ValidarCPF(string cpf)
