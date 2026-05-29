@@ -27,6 +27,9 @@ namespace HelpDeskWindowsForms.UI
             // Cria o caminho gráfico
             GraphicsPath path = new GraphicsPath();
             int radius = 12; // Raio ideal para elementos pequenos como este
+
+            if (panel8.Width <= radius * 2 || panel8.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel8.Width, panel8.Height);
 
             // Adiciona os arcos nos quatro cantos
@@ -61,6 +64,9 @@ namespace HelpDeskWindowsForms.UI
             // Cria o caminho gráfico
             GraphicsPath path = new GraphicsPath();
             int radius = 20; // Ajuste este valor se quiser mais ou menos arredondado
+
+            if (panel4.Width <= radius * 2 || panel4.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel4.Width, panel4.Height);
 
             // Adiciona os arcos nos quatro cantos
@@ -95,6 +101,9 @@ namespace HelpDeskWindowsForms.UI
             // Cria o caminho gráfico para o formato
             GraphicsPath path = new GraphicsPath();
             int radius = 25; // Raio mais pronunciado para um container maior
+
+            if (panel16.Width <= radius * 2 || panel16.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel16.Width, panel16.Height);
 
             // Adiciona os arcos nos quatro cantos
@@ -119,6 +128,9 @@ namespace HelpDeskWindowsForms.UI
             // Cria o caminho gráfico para o formato
             GraphicsPath path = new GraphicsPath();
             int radius = 15; // Raio arredondado para um visual moderno
+
+            if (panel2.Width <= radius * 2 || panel2.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel2.Width, panel2.Height);
 
             // Adiciona os arcos para arredondar os quatro cantos
@@ -138,6 +150,9 @@ namespace HelpDeskWindowsForms.UI
             // Criamos o caminho gráfico
             GraphicsPath path = new GraphicsPath();
             int radius = 20; // Raio arredondado
+
+            if (panel10.Width <= radius * 2 || panel10.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel10.Width, panel10.Height);
 
             // Definimos os arcos nos quatro cantos
@@ -158,6 +173,9 @@ namespace HelpDeskWindowsForms.UI
             GraphicsPath path = new GraphicsPath();
             // Use um raio menor para painéis pequenos (10px a 12px costuma ficar bom)
             int radius = 10;
+
+            if (panel11.Width <= radius * 2 || panel11.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel11.Width, panel11.Height);
 
             // Definimos os arcos nos quatro cantos
@@ -182,6 +200,9 @@ namespace HelpDeskWindowsForms.UI
             // Criamos o caminho gráfico
             GraphicsPath path = new GraphicsPath();
             int radius = 12; // Raio ideal para elementos pequenos
+
+            if (panel12.Width <= radius * 2 || panel12.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel12.Width, panel12.Height);
 
             // Definimos os arcos nos quatro cantos
@@ -201,6 +222,9 @@ namespace HelpDeskWindowsForms.UI
             // Cria o caminho gráfico
             GraphicsPath path = new GraphicsPath();
             int radius = 20; // Ajuste este valor se quiser mais ou menos arredondado
+
+            if (panel3.Width <= radius * 2 || panel3.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel3.Width, panel3.Height);
 
             // Adiciona os arcos nos quatro cantos
@@ -225,6 +249,9 @@ namespace HelpDeskWindowsForms.UI
             // Cria o caminho gráfico
             GraphicsPath path = new GraphicsPath();
             int radius = 15; // Um raio de 15px fica ótimo para campos de texto
+
+            if (panel9.Width <= radius * 2 || panel9.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel9.Width, panel9.Height);
 
             // Adiciona os arcos nos quatro cantos
@@ -244,6 +271,9 @@ namespace HelpDeskWindowsForms.UI
             // Cria o caminho gráfico
             GraphicsPath path = new GraphicsPath();
             int radius = 15; // Raio ideal para um arredondamento harmônico
+
+            if (panel7.Width <= radius * 2 || panel7.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel7.Width, panel7.Height);
 
             // Adiciona os arcos nos quatro cantos
@@ -263,6 +293,9 @@ namespace HelpDeskWindowsForms.UI
             // Cria o caminho gráfico
             GraphicsPath path = new GraphicsPath();
             int radius = 15; // Ajuste conforme a sua preferência
+
+            if (panel6.Width <= radius * 2 || panel6.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel6.Width, panel6.Height);
 
             // Adiciona os arcos nos quatro cantos
@@ -282,6 +315,9 @@ namespace HelpDeskWindowsForms.UI
             // Cria o caminho gráfico para o formato arredondado
             GraphicsPath path = new GraphicsPath();
             int radius = 15; // Mantendo o padrão de 15px para consistência
+
+            if (panel5.Width <= radius * 2 || panel5.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel5.Width, panel5.Height);
 
             // Adiciona os arcos nos quatro cantos
@@ -301,6 +337,9 @@ namespace HelpDeskWindowsForms.UI
             // Cria o caminho gráfico para o formato arredondado
             GraphicsPath path = new GraphicsPath();
             int radius = 15; // Mantendo o padrão para consistência visual
+
+            if (panel15.Width <= radius * 2 || panel15.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel15.Width, panel15.Height);
 
             // Adiciona os arcos nos quatro cantos
@@ -320,6 +359,9 @@ namespace HelpDeskWindowsForms.UI
             // Cria o caminho gráfico para o formato arredondado
             GraphicsPath path = new GraphicsPath();
             int radius = 15; // Ajuste conforme o tamanho do painel
+
+            if (panel14.Width <= radius * 2 || panel14.Height <= radius * 2) return;
+
             Rectangle rect = new Rectangle(0, 0, panel14.Width, panel14.Height);
 
             // Adiciona os arcos nos quatro cantos

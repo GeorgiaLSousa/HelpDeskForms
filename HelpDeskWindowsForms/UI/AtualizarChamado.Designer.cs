@@ -1,4 +1,7 @@
-﻿namespace HelpDeskWindowsForms.UI
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace HelpDeskWindowsForms.UI
 {
     partial class AtualizarChamado
     {
